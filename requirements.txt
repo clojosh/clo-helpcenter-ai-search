@@ -1,0 +1,14 @@
+openai==1.8.0
+questionary==2.0.1
+tqdm==4.66.1
+youtube-transcript-api==0.6.1
+pytube==15.0.0
+shortuuid==1.0.11
+requests==2.31.0
+azure-core==1.29.6
+azure-identity==1.13.0
+azure-search-documents==11.4.0
+python-dotenv==1.0.0
+tenacity==8.2.2
+PyMuPDF==1.23.22
+tiktoken==0.4.0
