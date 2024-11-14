@@ -136,7 +136,7 @@ class AISearch:
 
         return results_list
 
-    def create_search_index(self):
+    def create_search_index(self, index_name=None):
         # Create a search index
         fields = [
             SimpleField(name="ArticleId", type=SearchFieldDataType.String, key=True),
@@ -222,7 +222,7 @@ class AISearch:
 
         # Create the search index with the semantic settings
         index = SearchIndex(
-            name="allinone-index",
+            name=index_name,
             fields=fields,
             suggesters=[suggester],
             vector_search=vector_search,
@@ -368,23 +368,24 @@ if __name__ == "__main__":
     ).ask()
 
     cognitive_search = AISearch(Environment(env, brand))
-    cognitive_search.upload_documents()
-    # if task == "Create Search Index":
-    #     cognitive_search.create_search_index()
-    # elif task == "Delete Search Index":
-    #     cognitive_search.drop_search_index()
-    # elif task == "Delete All Documents":
-    #     cognitive_search.delete_all_documents()
-    # elif task == "Get Documents":
-    #     cognitive_search.get_documents(brand)
-    # elif task == "Search Documents":
-    #     search_type = questionary.select("Search Type?", choices=["Hybrid", "Text", "Vector"]).ask()
 
-    #     print("Enter Search Text:")
-    #     search_text = input()
-    #     if search_type == "Hybrid":
-    #         cognitive_search.hybrid_search(search_text)
-    #     elif search_type == "Text":
-    #         cognitive_search.text_search(search_text)
-    #     elif search_type == "Vector":
-    #         cognitive_search.vector_search(search_text)
+    if task == "Create Search Index":
+        index_name = questionary.text("Index Name?").ask()
+        cognitive_search.create_search_index(index_name)
+    elif task == "Delete Search Index":
+        cognitive_search.drop_search_index()
+    elif task == "Delete All Documents":
+        cognitive_search.delete_all_documents()
+    elif task == "Get Documents":
+        cognitive_search.get_documents(brand)
+    elif task == "Search Documents":
+        search_type = questionary.select("Search Type?", choices=["Hybrid", "Text", "Vector"]).ask()
+
+        print("Enter Search Text:")
+        search_text = input()
+        if search_type == "Hybrid":
+            cognitive_search.hybrid_search(search_text)
+        elif search_type == "Text":
+            cognitive_search.text_search(search_text)
+        elif search_type == "Vector":
+            cognitive_search.vector_search(search_text)
