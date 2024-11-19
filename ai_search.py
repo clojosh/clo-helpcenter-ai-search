@@ -1,6 +1,7 @@
 import csv
 import json
 import os
+from collections import Counter
 from datetime import datetime
 from pathlib import Path
 
@@ -298,7 +299,10 @@ class AISearch:
                     # "contentVector": result["contentVector"],
                 }
 
-            with open(os.path.join(backend_dir, "indexes", f"{brand}-index-english.json"), "w+", encoding="utf-8") as f:
+            if not os.path.exists(os.path.join(backend_dir, "indexes", self.environment.env)):
+                os.makedirs(os.path.join(backend_dir, "indexes", self.environment.env), exist_ok=True)
+
+            with open(os.path.join(backend_dir, "indexes", self.environment.env, f"{brand}-index-english.json"), "w+", encoding="utf-8") as f:
                 json.dump(results_list, f, ensure_ascii=False, indent=4)
 
     def upload_documents(self):
@@ -351,6 +355,17 @@ class AISearch:
                         }
                     )
 
+    def document_source_breakdown(self):
+        with open(os.path.join(backend_dir, "indexes", self.environment.env, "clo3d-index-english.json"), "r", encoding="utf-8") as f:
+            documents = json.load(f)
+
+            sources = [document["Source"][: document["Source"].rfind("/")] for document in documents]
+
+            sources_count = Counter(sources)
+
+            for url, count in sources_count.items():
+                print(f"{url}: {count}")
+
 
 if __name__ == "__main__":
     env = questionary.select("Which environment?", choices=["prod", "dev"]).ask()
@@ -364,6 +379,7 @@ if __name__ == "__main__":
             "Get Documents",
             "Search Documents",
             "Delete Posts",
+            "Get Document Source Breakdown",
         ],
     ).ask()
 
@@ -389,3 +405,7 @@ if __name__ == "__main__":
             cognitive_search.text_search(search_text)
         elif search_type == "Vector":
             cognitive_search.vector_search(search_text)
+    elif task == "Delete Posts":
+        cognitive_search.delete_posts()
+    elif task == "Get Document Source Breakdown":
+        cognitive_search.document_source_breakdown()

@@ -150,3 +150,4 @@ static/
 sources/
 .env.dev
 .env.prod
+indexes/
