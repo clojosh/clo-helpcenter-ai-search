@@ -1,0 +1,336 @@
+[
+    {
+        "ArticleId": "9027191378063",
+        "Source": "https://clovf.zendesk.com/hc/en-us/articles/9027191378063",
+        "Title": "Delete Account",
+        "Content": "Objective Delete Account Details 1) Delete Account Note: Currently, CLO-SET does not offer automatic account closure. Please submit a request for account deletion inquiries. Select 'Other Account Questions' Select ALL products you are using for a full account deletion.",
+        "Tokens": 51,
+        "SectionId": 9021928318863,
+        "Section": "General",
+        "CategoryId": 8813833873167,
+        "Category": "Merge Accounts (Existing User)",
+        "YoutubeLinks": []
+    },
+    {
+        "ArticleId": "9027560040463",
+        "Source": "https://clovf.zendesk.com/hc/en-us/articles/9027560040463",
+        "Title": "CONNECT 101",
+        "Content": "Objective Get to know the basics of the CLO3D software. What is CONNECT? CONNECT Part.1 on YouTube Visit CONNECT Help Center Details 1) What is CONNECT? CONNECT is a global community for fashion creators, empowering digital assets through an open marketplace, portfolio management tools, and networking. Additionally, CONNECT contributes to the fashion creator ecosystem, linking content to digital spaces like gaming, the metaverse, and entertainment. Please visit to explore the limitless potential of digital assets! 2) CONNECT Part.1 on YouTube Learn how to purchase and download items from CONNECT here. 3) Visit CONNECT Help Center For more tutorials, guides, and technical support, visit CONNECT Help Center.",
+        "Tokens": 138,
+        "SectionId": 8813921573519,
+        "Section": "CLO Virtual Fashion 101",
+        "CategoryId": 8813796249871,
+        "Category": "Sign Up (New User)",
+        "YoutubeLinks": [
+            "https://www.youtube.com/watch?v=mKeseEzM1Wc"
+        ]
+    },
+    {
+        "ArticleId": "9027556437647",
+        "Source": "https://clovf.zendesk.com/hc/en-us/articles/9027556437647",
+        "Title": "China Account Sign Up",
+        "Content": "Objective Follow the instructions below to create a China account in CLO-SET Sign Up Guide (China User) Troubleshooting Using CLO &amp Marvelous Designer Details 1) Sign Up Guide (China user) If you are an existing CLO-SET user, please follow the account merging guide HERE. If you do not have a CLO-SET account yet, please follow the steps below. 1. Type in your email, password, and mobile number for SMS verification. 2. Follow Captcha verification process 3. Verify your email to activate your account 4. Account creation complete. Please log in to start using CLO-SET 2) Troubleshooting Not receiving SMS verification? Please submit a request Not receiving verification email? Visit HERE Email address already in use if your email address is already in use, please use a different email address to sign up. OR, find the password for your existing account. 3) Using CLO &amp Marvelous Designer [Important] Starting from the 2024.0 version of CLO Individual and Marvelous Designer Personal license, you can start using your CLO-SET account to access CLO and Marvelous Designer Before 2024.0 Release (For Individual/Personal Users) To start using CLO and Marvelous Designer, please create an account on the website. We recommend using the same email address as you did in CLO-SET, for a smoother account merging process To access CLO and Marvelous Designer (before 2024.0 version), please use your User ID and Password for each service. MD 2024.0 release scheduled in Late February CLO 2024.0 release scheduled mid-March After 2024.0 Release (For Individual/Personal Users) Start using CLO-SET account to access CLO and Marvelous Designer software. Your accounts in CLO, Marvelous Designer, and CLO-SET will automatically be merged based on the email address registered with your account. Learn more on the Merged Account (CLO-SET account) HERE.",
+        "Tokens": 423,
+        "SectionId": 8813820131471,
+        "Section": "Account",
+        "CategoryId": 8813796249871,
+        "Category": "Sign Up (New User)",
+        "YoutubeLinks": []
+    },
+    {
+        "ArticleId": "9540709934223",
+        "Source": "https://clovf.zendesk.com/hc/en-us/articles/9540709934223",
+        "Title": "Troubleshooting Email Changes on CLO-SET",
+        "Content": "Objective Learn about the error cases and troubleshooting process when changing your account email. [Important] You must include a Trace ID in your ticket for changing emails. Please follow instructions below. Email address already in use Unable to change email Account region mismatch (*CLO/CLO-SET only) Email Change will affect the plan type (*CLO only) Details 1) Email Address already in use Error Message: CLO-SET account already exists with the email that you want to change to. The email address you want to change to already exists in CLO-SET. In this case, the aforementioned account needs to be deleted first, for you to change your current account email to another. If you need further support, please submit a ticket with the Trace ID from your error page. 2) Unable to change email Error Message: You cannot change your email. You cannot change your email because the email is already in use as Enterprise or Academy account in CLO. If you are using an enterprise/academic institution email and would like to change your email, please contact us. If you are an individual/student user and would like to change to an enterprise/academic institution email, please contact us. 3) Account Region Mismatch (*CLO/CLO-SET only) Error Message: This email already exists. However, it cannot be changed because it does not match the account type you are currently using. Your email address cannot be changed because your current account is registered as China account and the new email address to be used is registered as a Global account, or vice versa. If you need further support, please submit a ticket with the Trace ID from your error page. 4) Email Change will affect the plan type (*CLO only) Error Message: Your License has not expired. You cannot change your email because the CLO license you are currently using has not expired. If you have an active license and changing your email address affects your plan type (e.g., student to individual or vice versa), you won't be able to proceed with the email change. You may need to retain your current email or consider cancelling your subscription to initiate the change. If you don't have an active license and changing your email address affects your plan type (e.g., student to individual or vice versa), your user type will automatically change with the email change. (IndividualStudent) However, be aware that this may impact the available subscription plans. Only plans corresponding to your updated user type will be available for purchase. If you need further support, please submit a ticket with the Trace ID from your error page. If you have any questions or need further assistance, feel free to Contact Us.",
+        "Tokens": 539,
+        "SectionId": 9021928318863,
+        "Section": "General",
+        "CategoryId": 8813833873167,
+        "Category": "Merge Accounts (Existing User)",
+        "YoutubeLinks": []
+    },
+    {
+        "ArticleId": "9021978151439",
+        "Source": "https://clovf.zendesk.com/hc/en-us/articles/9021978151439",
+        "Title": "Multiple Emails - Consolidate Account",
+        "Content": "[Problem arising from having multiple email address] CLO Virtual Fashion's system will use your email address as key when merging accounts across services. Therefore, if you are using 2 or more services with different emails, the data will not be synced between the merged accounts. This may result in: Not finding your assets in CONNECT marketplace Not being able to log into software (no license access) Not being able to access your CLO-SET Group To solve the issue, follow the instructions below: Check if you are using different emails. Go to 'My page' or 'My account' on each service, and confirm which emails are registered for your account. Decide on the main email address you wish to use moving forward. Contact the support team by submitting a request to consolidate your email accounts.",
+        "Tokens": 159,
+        "SectionId": 9021977069327,
+        "Section": "FAQ & Troubleshooting",
+        "CategoryId": 8813833873167,
+        "Category": "Merge Accounts (Existing User)",
+        "YoutubeLinks": []
+    },
+    {
+        "ArticleId": "9876556955663",
+        "Source": "https://clovf.zendesk.com/hc/en-us/articles/9876556955663",
+        "Title": "Change Email from CLO-SET",
+        "Content": "Objective Understand how to change your email address, and the following implications of changing your account email. Change Email vs. Email Switching Ground Rules for Change Email Change Email Guide General Flow Confirm License Info Troubleshooting Change Email Implications Troubleshooting Details 1) Change Email vs. Email Switching Change Email VS Email Switch (when the 'new email' is already on CLO-SET) Change Email: Change your CLO-SET Integrated account email. Changing the CLO-SET email will also update the connected CLO &amp Marvelous Designer license information if any. Please find instructions below on the Change Email Guide. Email Switch: Email Switching is for users hoping to connect their existing CLO or Marvelous Designer license with a different CLO-SET email account. This feature is not available yet. For such requests, please submit a ticket. 2) Ground Rules for Change Email Your CONNECT account is the same as CLO-SET account. The two services share account information. Accounts registered as Enterprise or Academic on CLO software cannot use 'Change email' feature. If the email address you want to change TO is already registered in CLO-SET, you cannot override an existing account. Please refer to the troubleshooting guide for further steps. 3) Change Email Guide 1. Visit 'my page' from CLO-SET , CLO, or Marvelous Designer to start the change email process 2. If your CLO-SET account is also active on CLO or Marvelous Designer service, please note that the account information on respective services will also be updated. Click 'OK' to proceed. 3. On the following screen, please type in the new email address to be used. Click 'Send' to receive an email with the verification code. Not receiving verification emails? 4. Once the verification is complete, you will see the final modal on the right. Please go back to the sign-in page, and start signing in with the new email address. Please also carefully read the implications of changing your emails. 5. [Important] Active License found under your New Email Address If the there is/are active CLO or Marvelous Designer license under the 'new email' you typed in, your CLO-SET account will now be integrated with those License information. One of the two modals below will be displayed with the list of Licenses to be connected. *Signing again with your current email (abc@clo3d.com) will create a 2nd CLO-SET account after changing your account email to newemail@clo3d.com. *If you would like to keep the license under the current email (abc@clo3d.com), please use the 'Email Switching' feature instead. 6. Troubleshooting Should you experience an error while attempting to change the email address, please find the Troubleshooting Guide for instructions. 4) Change Email Implications Impact on Request and Community History Changing your email address will disconnect the history of your requests and community activities. This includes comments, request history, and other related data, which will no longer be associated with your new email address. Account Type Enterprise user email changes are not allowed. Please make the change through your Company ID. It is possible to change your personal email to a corporate email, but the account type will not change. If you wish to change your account type from personal to enterprise, please contact our support team. Additionally, please review what to consider when changing emails for each product: CLO / Marvelous Designer / CONNECT / CLO-SET [CLO] Billing Email Matching If your billing email matches your CLO-SET account email, it will automatically update when you change your CLO-SET email. However, if they don't match, your billing email will remain unchanged. Plan Type Considerations If you have an active license and changing your email address affects your plan type (e.g., student to individual or vice versa), you won't be able to proceed with the email change. You may need to retain your current email or consider cancelling your subscription to initiate the change. If you don't have an active license and changing your email address affects your plan type (e.g., student to individual or vice versa), your user type will automatically change with the email change. (IndividualStudent) However, be aware that this may impact the available subscription plans. Only plans corresponding to your updated user type will be available for purchase. Change Email between CLO global and China Websites When you change your email on the CLO Global website, you cannot change it to the email registered on the CLO China website. [Marvelous Designer] Billing Email Matching If your billing email matches your CLO-SET account email, it will automatically update when you change your CLO-SET email. However, if they don't match, your billing email will remain unchanged. License Changing your email does not affect your license. You can change your email even if you have an active license, and you will be able to continue using your license with the new email. [CLO-SET / CONNECT] Billing Email Matching The registered payment information on Stripe will NOT be updated automatically. To change the email address of your Stripe account, please visit Stripe (https://stripe.com/). Account Data Users can continue accessing the Groups and uploaded files they have permission to. Please note that your account name will not be updated. To change your account name, please visit https://style.clo-set.com/account/myaccount. 5) Troubleshooting For various reasons, email changing is not supported systematically for certain accounts. Please follow the Troubleshooting Guide to reach the support team. Before changing your email address in CLO-SET, please consider these factors to ensure a smooth transition and avoid any unexpected issues. If you have any questions or need further assistance, feel free to Contact Us.",
+        "Tokens": 1196,
+        "SectionId": 9021928318863,
+        "Section": "General",
+        "CategoryId": 8813833873167,
+        "Category": "Merge Accounts (Existing User)",
+        "YoutubeLinks": []
+    },
+    {
+        "ArticleId": "9182697367823",
+        "Source": "https://clovf.zendesk.com/hc/en-us/articles/9182697367823",
+        "Title": "Student Account",
+        "Content": "Objective Verify your enrollment to apply for student discounts in CLO3D. Student Discount in CLO3D Verify your Enrollment Subscribe to Student Plan Details 1) Student Discount in CLO3D CLO3D provides 50% discount on an Individual plan for eligible high school, college, and university students worldwide. Discounted price is $25 USD/month or $225 USD/year. 2) Verify your Enrollment Go to Student Eligibility site and type in your account email For eligible school domains: USE EMAIL ADDRESS button will be activated. Click on the button and sign up. if you already have a CLO-SET account, please sign-in using your existing account. Student Eligibility will be applied automatically. Follow the steps HERE to begin subscription. Your account will be automatically applied to the student discount. (You can see the discounted price on your checkout page after the subscription button.) When your school domain is NOT eligible, LEARN MORE button will be activated. Click on the button and fill out all the information and click SUBMIT. Click CREATE ACCOUNT button to sign up if you have not done yet. Our team will reach out to you. When your school does not provide a student email address If your school does not provide you with a student email, please attach an official letter from your school to confirm this, along with your enrollment documents. With this, we will be able to add the discount under your personal email. 3) Subscribe to Student Plan Once your account has been verified as student account, you can start subscribing to the Student Plan. Go to https://clo3d.com/en/plans and start your subscription. Please note that if you can't use your school email after graduation, you would face an issue with receiving CLO emails such as renewal notifications and any CLO news.",
+        "Tokens": 365,
+        "SectionId": 8813820131471,
+        "Section": "Account",
+        "CategoryId": 8813796249871,
+        "Category": "Sign Up (New User)",
+        "YoutubeLinks": []
+    },
+    {
+        "ArticleId": "9021921372047",
+        "Source": "https://clovf.zendesk.com/hc/en-us/articles/9021921372047",
+        "Title": "Account Merging (from CLO-SET)",
+        "Content": "Objective Understand how to merge your existing CLO Virtual Fashion accounts. Account Merging Guide Sign in with CLO or Marvelous Designer ID China Account Sign In with Google Troubleshooting Details 1) Account Merging Guide If you are an existing CLO-SET user, the account merging process will be initiated when you log in. If you do not have a CLO-SET account yet, please sign up HERE. 1. Type in your CLO-SET email account and password. If you have been using CLO or Marvelous Designer credentials, follow this guide. 2. Agree to the Terms of Service 3. Account Merging is complete 2) Sign in with CLO or Marvelous Designer ID With the Account Merging release, the CLO/Marvelous Designer log in option will no longer be available. If you have been using CLO-SET with your software account, please follow below steps. Before New (from Feb 2024) 1. Type in your email address and password *Use the email address registered in CLO or Marvelous Designer. 2. If you haven't yet, please set your account password. Please note that this password will be used throughout CLO Virtual Fashion products from CLO and Marvelous Designer 2024.0 version and onward. 3. Once the password is set, you can return to the sign in page, and follow the steps in General Guide. [Important] Please note that starting from the 2024.0 version of CLO Individual and Marvelous Designer Personal license, the Merged Account will be used to log in. 3) China Account If you are located in China, you will be directed to a China website. All Chinese users must verify their mobile number via SMS verification. Follow the steps below. 1. Type in your email and password, and verify your mobile number via SMS 2. Once the SMS verification is complete, agree to the new ToS to complete the account merging process 3. If you have been using CLO-SET with CLO or Marvelous Designer credentials, you must first set CLO-SET password. Follow the set password guide here. 4) Sign In with Google You may use your Google account to use CLO-SET. 1. Click 'Sign in with Google' and complete the sign in process from the modal. 2. Once you are logged in, agree to the new Terms of Service to complete the account merging process. 5) Troubleshooting If you are experiencing any disruptions during the sign in process, please refer to the FAQ section of this help center article. If you need further assistance, please submit a ticket.",
+        "Tokens": 550,
+        "SectionId": 9021928318863,
+        "Section": "General",
+        "CategoryId": 8813833873167,
+        "Category": "Merge Accounts (Existing User)",
+        "YoutubeLinks": []
+    },
+    {
+        "ArticleId": "9068855340559",
+        "Source": "https://clovf.zendesk.com/hc/en-us/articles/9068855340559",
+        "Title": "Account Merging (from Marvelous Designer)",
+        "Content": "Objective Understand how to merge your existing CLO Virtual Fashion accounts from Marvelous Designer. Merging accounts with your License ID/PW Sign in with CLO-SET FAQ - using Marvelous Designer after merging accounts *Please note: this guide applies only to Personal license users on version 2024.0 and above. Enterprise users do NOT need to take any immediate action. Details 1) Merging Accounts with your License ID/PW Start by typing in your user ID &amp password in #1, and click 'Login' Please verify your email address if it has not been done yet - Not receiving the verification email? You will see a notification to create an integrated CLO-SET Account The account merging process will be done based on the email &amp password from your current Marvelous Designer account. Please note that you are NOT allowed to change the email or password manually. Contact us for further support. Agree to the CLO-SET Terms of Service to complete the account merging process. Upon completion, go back to Marvelous Designer 2024.0 and sign in with CLO-SET with #2 login option. [Important] Please note that once you merge your accounts, you will no longer be able to sign in with your user id/pw for software versions 2024.0 and beyond. For versions below 2024.0, you may continue logging in with your license ID/PW. 2) Sign in with CLO-SET If you are a CLO-SET/CONNECT user, you may have completed the account merging process. OR, if you have completed the account merging process from Marvelous Designer, this will also apply. In this case, when attempting to log in with your license ID/PW, you will see the below alert in Marvelous Designer Personal license version 2024.0 and above. Please click 'Sign in with CLO-SET' to continue logging in, and follow the instructions on the website. 3) FAQ - Using Marvelous Designer after merging accounts Visit this guide for a detailed FAQ for using Marvelous Designer after merging accounts.",
+        "Tokens": 427,
+        "SectionId": 9021928318863,
+        "Section": "General",
+        "CategoryId": 8813833873167,
+        "Category": "Merge Accounts (Existing User)",
+        "YoutubeLinks": []
+    },
+    {
+        "ArticleId": "9027530437007",
+        "Source": "https://clovf.zendesk.com/hc/en-us/articles/9027530437007",
+        "Title": "eCLOsystem",
+        "Content": "Objective Get to know the eCLOsystem - an end-to-end digital workflow throughout CLO Virtual Fashion service eCLOsystem CLO-SET Account Details 1) eCLOsystem Learn about how CLO's software centralizes your 3D garment renders from the design process to our cloud management platform, CLO-SET, and share with a global community on CONNECT, an open marketplace. 2) CLO-SET Account Access all CLO Virtual Fashion services with one email account. Your CLO-SET account is a single account used throughout all CLO Virtual Fashion services, for a streamlined experience. Learn more about your CLO-SET account HERE.",
+        "Tokens": 137,
+        "SectionId": 8813921573519,
+        "Section": "CLO Virtual Fashion 101",
+        "CategoryId": 8813796249871,
+        "Category": "Sign Up (New User)",
+        "YoutubeLinks": [
+            "https://www.youtube.com/watch?v=NBYToPbHw2I"
+        ]
+    },
+    {
+        "ArticleId": "9022172594703",
+        "Source": "https://clovf.zendesk.com/hc/en-us/articles/9022172594703",
+        "Title": "Can I cancel the account merging process?",
+        "Content": "No. Once the account merging process is complete, it cannot be undone. Upon the account merging completion, you will see a notice modal and receive a welcome email from CLO Virtual Fashion If you are having trouble logging into any of the CLO Virtual Fashion services upon merging, or not seeing all of your assets/data from your original account, it may be due to having different emails. In this case, please contact us by submitting a request to consolidate your email address. Find more guide on consolidating email accounts.",
+        "Tokens": 103,
+        "SectionId": 9021977069327,
+        "Section": "FAQ & Troubleshooting",
+        "CategoryId": 8813833873167,
+        "Category": "Merge Accounts (Existing User)",
+        "YoutubeLinks": []
+    },
+    {
+        "ArticleId": "9063697836431",
+        "Source": "https://clovf.zendesk.com/hc/en-us/articles/9063697836431",
+        "Title": "Reset Password",
+        "Content": "Objective Learn how to reset your account password. CLO-SET Account License Password for CLO and Marvelous Designer Details 1) CLO-SET Password To update your CLO-SET account password, please visit https://style.clo-set.com/en/account/password/find For China account, visit https://style-cn.clo-set.com/account/password/find 2)License Password for CLO and Marvelous Designer below 2024.0 To update the License Password (used for software log-in on versions below 2024.0), please visit 'My Page' to update the password. Please note that your 'CLO-SET account password' will NOT be synced with the License Password.",
+        "Tokens": 141,
+        "SectionId": 9021928318863,
+        "Section": "General",
+        "CategoryId": 8813833873167,
+        "Category": "Merge Accounts (Existing User)",
+        "YoutubeLinks": []
+    },
+    {
+        "ArticleId": "8813796258575",
+        "Source": "https://clovf.zendesk.com/hc/en-us/articles/8813796258575",
+        "Title": "My Page",
+        "Content": "Objective Learn how to change account settings in CLO-SET My Page. My Page Details 1) My Page Visit 'My Page' to manage your account settings in CLO-SET 1. Change Profile picture and Username 2. Change Password 3. Update CLO-SET language settings 4. Manage email notification settings 5. Manage marketing agreement [Important] Starting the new 2024.0 versions of CLO and Marvelous Designer, your email address and password for CLO-SET account will replace your log in credentials in CLO and Marvelous Designer for Individual/Personal users. Before 2024.0 Release (For Individual/Personal Users) Use CLO-SET account to log in to CLO-SET Use CLO, Marvelous Designer accounts to log into respective services. License, Subscriptions, and Marketing Agreement is managed respectively for each service. After 2024.0 Release (For Individual/Personal Users) Start using CLO-SET account to access CLO and Marvelous Designer software. Your email address, password, and username will be shared throughout CLO Virtual Fashion services. License, Subscriptions, and Marketing Agreement will continue to be managed respectively for each service.",
+        "Tokens": 248,
+        "SectionId": 8813820131471,
+        "Section": "Account",
+        "CategoryId": 8813796249871,
+        "Category": "Sign Up (New User)",
+        "YoutubeLinks": []
+    },
+    {
+        "ArticleId": "9027552439823",
+        "Source": "https://clovf.zendesk.com/hc/en-us/articles/9027552439823",
+        "Title": "Marvelous Designer 101",
+        "Content": "Objective Get to know the basics of the Marvelous Designer software. Beginner Series on YouTube Tutorials Visit Marvelous Designer Help Center *Please note: Prior to the release of the new Marvelous Designer 2024.0 version release, all users must sign up in marvelousdesigner.com to start using CLO software. Once the 2024.0 version is released, all Personal users can start using CLO-SET account to log into the software. Details 1) Beginner Series on YouTube Learn how to use Marvelous Designer from a step-by-step tutorial. 2) Tutorials We're here to help. Find more tutorials tailored for beginners on the Tutorials page. 3) Visit Marvelous Designer Help Center For more resources, guides, and technical support, please visit Marvelous Designer Help Center",
+        "Tokens": 163,
+        "SectionId": 8813921573519,
+        "Section": "CLO Virtual Fashion 101",
+        "CategoryId": 8813796249871,
+        "Category": "Sign Up (New User)",
+        "YoutubeLinks": [
+            "https://www.youtube.com/watch?v=EXC85o2zWyk"
+        ]
+    },
+    {
+        "ArticleId": "9027551866767",
+        "Source": "https://clovf.zendesk.com/hc/en-us/articles/9027551866767",
+        "Title": "CLO 101",
+        "Content": "Objective Get to know the basics of the CLO3D software. Beginner's Guide on YouTube CLO Basic Apparel Training on Udemy Visit CLO3D Help Center *Please note: Prior to the release of the new CLO 2024.0 version release, all users must sign up in CLO3D.com to start using CLO software. Once the 2024.0 is released, Individual/Personal users can start using CLO-SET account to log into the software. Details 1) Beginner's Guide on YouTube Learn from a step-by-step guide to start using CLO3D. 2) CLO Basic Apparel Training on Udemy Designed &amp created by the CLO 3D Design Team. This program consists of 5 separate paid courses that go over all the techniques and concepts for creating garments in CLO. Through these courses, there are short quizzes that test your retention of the material. Learners will receive a certification of completion after each course once they're completed. This Basic apparel Training on Udemy is made with CLO version 7.1 and is only available in English at this time. 3) Public Workshops We organize public online and onsite CLO workshops in different languages at basic, intermediate, and advanced levels. The courses are given by our 3D experts and are aimed at small groups of individual users. Please find more information about upcoming workshops here. 4) Visit CLO3D Help Center For more resources, guides, and technical support, please visit CLO3D's Help Center.",
+        "Tokens": 319,
+        "SectionId": 8813921573519,
+        "Section": "CLO Virtual Fashion 101",
+        "CategoryId": 8813796249871,
+        "Category": "Sign Up (New User)",
+        "YoutubeLinks": [
+            "https://www.youtube.com/watch?v=zYL3Im5XFHA"
+        ]
+    },
+    {
+        "ArticleId": "9021946864911",
+        "Source": "https://clovf.zendesk.com/hc/en-us/articles/9021946864911",
+        "Title": "How does merging account affect my subscription?",
+        "Content": "Objective Understand how to keep using your license/subscriptions/purchased items after merging account. How does Account Merging work? Checking Subscription info What happens to my subscription cycle? Consolidating Email Accounts (Multiple Email Accounts) [Important] This article refers to Individual User in CLO Virtual Fashion. If you are an Enterprise user, your software usage will NOT change with the account merging process. Read more on Individual vs. Enterprise. Details 1) How does Account Merging work? The account merging process is based on the email address registered on your current account. It simply links all accounts with the same email address. Account Merging does NOT impact your license or subscription status, or other account info. If you are using multiple emails, please refer to this guide for further directions. What DOES change What does NOT change software log in will be done using the merged account for CLO, Marvelous Designer 2024.0 and onward website log in will be done using the merged account subscriptions license purchased items in CONNECT assets stored in CLO-SET 2) Checking Subscription Info Upon completing the account merging process, your account information will remain. You will continue with full access to the software license, purchased items, and subscriptions as done in your current account. This applies to all users, regardless of the number of services you are registered to, as long as you have the same email address registered. If you are using different emails, you can: 1) consolidate your account emails OR 2) keep using 2 different merged accounts. You may check further subscription status and account information on you account page: CLO3D Marvelous Designer CLO-SET CONNECT Find more instructions on how to keep using service upon completing the merging process: Using CLO3D Using Marvelous Designer Using CLO-SET 3) What happens to my subscription cycle if I change my account email? Changing your account email will NOT impact your subscription cycle or payment information. Please note that the email notifications on the renewal and payment confirmation will be sent to your original email registered at the point of subscription. 4) Consolidating Email Accounts (Multiple Email Accounts) Ideally, your account merging process should be done automatically, as long as your accounts are registered with the same email address. However, we understand that this may not be the case. If you have multiple emails registered across CLO Virtual Fashion services, the account merging process will lead to multiple CLO-SET (merged) accounts. Your asset/data/subscription will NOT be synced between different CLO-SET (merged) accounts. Resolution: choose 1 main email address to be used moving forward, and contact support team by submitting a request.",
+        "Tokens": 541,
+        "SectionId": 9021931513103,
+        "Section": "Subscription",
+        "CategoryId": 8813833873167,
+        "Category": "Merge Accounts (Existing User)",
+        "YoutubeLinks": []
+    },
+    {
+        "ArticleId": "9021945538575",
+        "Source": "https://clovf.zendesk.com/hc/en-us/articles/9021945538575",
+        "Title": "What is Merged Account?",
+        "Content": "Objective What is Merged Account (CLO-SET Account)? Merged Account Benefits Details 1) What is Merged Account (CLO-SET Account)? Merged Account, also called CLO-SET account, is a single email account that allows users to access all CLO Virtual Fashion services, or the 'SET' of all 'CLO' products. Your existing CLO, Marvelous Designer, and CLO-SET accounts will be merged based on the email address registered with each account. 2) Merged Account Benefits Seamless Say goodbye to interruptions in your workflow. Access CLO-SET and CONNECT asset libraries directly from CLO and Marvelous Designer, without any extra logins. Secure Safeguard your creations with one login. With the CLO-SET account, minimize security risks associated with managing multiple accounts and conveniently monitor all your assets in one place. Simple CLO-SET account makes managing and updating account info easy. Take control of your account details to be used for all CLO Virtual Fashion products on a single page.",
+        "Tokens": 213,
+        "SectionId": 9021928318863,
+        "Section": "General",
+        "CategoryId": 8813833873167,
+        "Category": "Merge Accounts (Existing User)",
+        "YoutubeLinks": []
+    },
+    {
+        "ArticleId": "8813796252815",
+        "Source": "https://clovf.zendesk.com/hc/en-us/articles/8813796252815",
+        "Title": "Delete Account",
+        "Content": "Objective Delete Account Details 1) Delete Account Note: Currently, CLO-SET does not offer automatic account closure. Please submit a request for account deletion inquiries. Select 'Other Account Questions' Select ALL products you are using for a full account deletion. Note the account information. Please list ALL of the account email for the selected services.",
+        "Tokens": 68,
+        "SectionId": 8813820131471,
+        "Section": "Account",
+        "CategoryId": 8813796249871,
+        "Category": "Sign Up (New User)",
+        "YoutubeLinks": []
+    },
+    {
+        "ArticleId": "9027553203599",
+        "Source": "https://clovf.zendesk.com/hc/en-us/articles/9027553203599",
+        "Title": "CLO-SET 101",
+        "Content": "Objective Get to know the basics of the CLO-SET platform. What is CLO-SET? CLO-SET 101 Tutorial on YouTube Visit CLO-SET help center Details 1) What is CLO-SET? Bridging Creativity, Seamless Collaboration. CLO-SET is a Collaborative 3D Creation Workspace that maximizes the value of the 3D assets by bridging stages of the product life cycle in one centralized digital space. 2) CLO-SET 101 Tutorial on YouTube New to CLO-SET? Follow the step-by-step guide below to start your journey. 3) Visit CLO-SET Help Center Find more guides, tutorials, and technical support on CLO-SET Help Center.",
+        "Tokens": 153,
+        "SectionId": 8813921573519,
+        "Section": "CLO Virtual Fashion 101",
+        "CategoryId": 8813796249871,
+        "Category": "Sign Up (New User)",
+        "YoutubeLinks": [
+            "https://www.youtube.com/watch?v=m7SWrfveiZg"
+        ]
+    },
+    {
+        "ArticleId": "8813820139407",
+        "Source": "https://clovf.zendesk.com/hc/en-us/articles/8813820139407",
+        "Title": "Sign Up Guide",
+        "Content": "Objective Create a new CLO-SET account to start using all CLO Virtual Fashion services. Sign Up Guide Sigh up with Google Troubleshooting Using CLO &amp Marvelous Designer Details 1) Sign Up Guide If you are an existing CLO-SET user, please follow the account merging guide HERE. If you do not have a CLO-SET account yet, please follow the steps below. 1. From the sign in page, click on 'Don't have an account? Sign Up' button 2. Verify your email to activate your account Having trouble verifying your email? 2) Sign up with Google 1. From the Sign Up page, click 'Sign in with Google' 2. From the pop-up, log in to your Google Account to register with 3. Agree to the CLO-SET Terms of Service to finish registration. 3) Troubleshooting Not receiving verification email? Visit HERE Email address already in use if your email address is already in use, please use a different email address to sign up. OR, find the password for your existing account. 4) Using CLO &amp Marvelous Designer [Important] Starting from the 2024.0 version of CLO Individual and Marvelous Designer Personal license, you can start using your CLO-SET account to access CLO and Marvelous Designer Before 2024.0 Release (For Individual/Personal Users) To start using CLO and Marvelous Designer, please create an account on the website. We recommend using the same email address as you did in CLO-SET, for a smoother account merging process To access CLO and Marvelous Designer (before 2024.0 version), please use your User ID and Password for each service. MD 2024.0 release scheduled in Late February CLO 2024.0 release scheduled mid-March After 2024.0 Release (For Individual/Personal Users) Start using CLO-SET account to access CLO and Marvelous Designer software. Your accounts in CLO, Marvelous Designer, and CLO-SET will automatically be merged based on the email address registered with your account. Learn more on the Merged Account (CLO-SET account) HERE. For more instructions on CLO and Marvelous Designer use, please follow the hyperlink.",
+        "Tokens": 475,
+        "SectionId": 8813820131471,
+        "Section": "Account",
+        "CategoryId": 8813796249871,
+        "Category": "Sign Up (New User)",
+        "YoutubeLinks": []
+    },
+    {
+        "ArticleId": "9081455362191",
+        "Source": "https://clovf.zendesk.com/hc/en-us/articles/9081455362191",
+        "Title": "Account Merging (from CLO3D)",
+        "Content": "Objective Understand how to merge your existing CLO Virtual Fashion accounts from CLO. Account Merging Guide Sign in with CLO-SET FAQ - Using CLO after merging accounts *Please note: this guide applies only to Personal license users on version 2024.0 and above.Enterprise users do NOT need to take any immediate action. Details 1) Account Merging Guide Start by typing in your CLO ID/Email &amp password in #1, and click 'Login' Please verify your email address if it has not been done yet - Not receiving the verification email? You will see a notification to create an integrated CLO-SET Account The account merging process will be done based on the email &amp password from your current Marvelous Designer account. Please note that you are NOT allowed to change the email or password manually. Contact us for further support. Starting from CLO 2024.0.192, Individual users can only sign in using CLO-SET account. Agree to the CLO-SET Terms of Service to complete the account merging process. Upon completion, go back to CLO 2024.0 and sign in with CLO-SET with #2 login option. [Important] Please note that once you merge your accounts, you will no longer be able to sign in with your user id/pw for software versions 2024.0 and beyond. For versions below 2024.0, you may continue logging in with your license ID/PW. 2) Sign in with CLO-SET If you are a CLO-SET/CONNECT user, you may have completed the account merging process. OR, if you have completed the account merging process from CLO, this will also apply. In this case, when attempting to log in with your license ID/PW, you will see the below alert in CLO Individual license version 2024.0 and above. Please click 'Sign in with CLO-SET' to continue logging in, and follow the instructions on the website. 3) FAQ - Using CLO after merging accounts Visit this guide for a detailed FAQ for using CLO after merging accounts.",
+        "Tokens": 438,
+        "SectionId": 9021928318863,
+        "Section": "General",
+        "CategoryId": 8813833873167,
+        "Category": "Merge Accounts (Existing User)",
+        "YoutubeLinks": []
+    },
+    {
+        "ArticleId": "9026105112591",
+        "Source": "https://clovf.zendesk.com/hc/en-us/articles/9026105112591",
+        "Title": "Forgot your password?",
+        "Content": "[Before merging accounts / Change License PW only] Please visit the respective product site to reset your password. Please note that before merging your accounts, password information will NOT be synced throughout services. [Important] If you are using CLO or Marvelous Designer versions below 2024.0, please visit 'My Page' of CLO/Marvelous Designer to update your License Password. CLO3D Marvelous Designer [After merging accounts - change CLO-SET account password] Go to https:/clo-set.com/en/account/password/find to reset your password [Not receiving reset password email] If you have requested the 'reset password' email but are not receiving the mail, please check below: Make sure you are using the correct email address, and that you have an active account in CLO-SET. If you have not yet merged your account, please visit www.clo3d.com or www.marvelousdesigner.com to initiate the account merge. Refer to the guideline on Not receiving verification email? guide for further troubleshooting instructions. [Cannot access email inbox anymore] If you forgot your password, but cannot use the email address to receive 'reset password' email, please submit a ticket with the below information for confirmation. Last 4 digits of your credit card: Expiration Date (MM/YYYY): If you do not have any payment history or active subscription on your current account, you can either 1) provide a proof of ownership of the email address in other forms or 2) create a new account with active email address.",
+        "Tokens": 313,
+        "SectionId": 9021977069327,
+        "Section": "FAQ & Troubleshooting",
+        "CategoryId": 8813833873167,
+        "Category": "Merge Accounts (Existing User)",
+        "YoutubeLinks": []
+    },
+    {
+        "ArticleId": "9021973310863",
+        "Source": "https://clovf.zendesk.com/hc/en-us/articles/9021973310863",
+        "Title": "Using Marvelous Designer",
+        "Content": "Objective Access all CLO Virtual Fashion services using a single email account. This FAQ will cover the updates and changes to login methods for Marvelous Designer Personal &amp Student license account types. This change will NOT affect Enterprise &amp Academic account types at this time. Please check the general FAQ if you have questions about the account merging process (CLO-SET accounts). Details 1) Change in sign in method Effective date on the release of Marvelous Designer 2024.0. What does this cover? Marvelous Designer website / Software version 2024.0 and above. Software Version (12,11,10 and below) Software Version Above 2024.0 How to login Existing User ID &amp Password CLO-SET Account &amp Password 2) How do I get a CLO-SET Account &amp Password if I have an existing Marvelous Designer ID? Check out our detailed step-by-step guide HERE. 3) What is the difference between a CLO-SET account and my previous Marvelous Designer ID? With your old Marvelous Designer ID you had to have multiple logins to access all of the CLO Virtual Fashion (CVF) products and services. Now with one CLO-SET account you can access all CLO Virtual Fashion services without additional logins. 4) I am using a perpetual license for Marvelous Designer. Do I have to merge my account? You do not have to If you are only logging into Marvelous Designer software only. If you want to access the Marvelous Designer website, you will need to follow the on screen prompt to merge your account into a CLO-SET account. Or you can check out our detailed step-by-step guide HERE. 5) Can I still use my Perpetual License after I merge my account with CLO-SET? Yes! All data/assets/subscription information associated with your pre-existing account will remain the same. You can download your software licenses from the same location, in My Account page. 6) How do I login to CLO / Marvelous Designer / Jinny after I merge my account? You can login to CLO / Marvelous Designer / Jinny with your CLO-SET Account &amp Password. 7) I have a subscription license for Marvelous Designer and I like to use an older version than 2024.0. Do I have to use a different sign in or can I use the CLO-SET account? If you have an old installer on your device and you have access to versions below 12: Use the older login method. Login to the installed version you wish to use with your User ID &amp Password (same as before). For 2024.0 and above: you can log in to all CLO Virtual Fashion product (CLO/Marvelous Designer/CONNECT/CLO-SET) websites and software with your CLO-SET account. 8) I bought items from the Marvelous Designer Store (before CONNECT existed). Where can I download my purchased items? All items purchased from the Marvelous Designer Store will be downloadable from CONNECT's My Page &gt Purchase tab. *This applies to purchases made after April 28, 2020 on the Marvelous Designer store page. If you have purchases made before April 28, 2020, those are still stored and downloadable from the Marvelous Designer &gt My Account page. 9) I have both CLO and Marvelous Designer IDs and I use them frequently. How does it affect me? You no longer have to use two separate logins! You can continue using your licenses without functional change for both CLO and Marvelous Designer. All you have to do is sign in with your CLO-SET account. You can check the license information for your products on the CLO or Marvelous Designer websites. 10) I like to use different email addresses for CLO and Marvelous Designer for my own reasons and want to keep them separate. Can I still have separate accounts? Yes, make sure to use the different email addresses for your CLO-SET merge so that you will have two separate CLO-SET accounts. The accounts are tied to each email address and the licenses associated with each account will be included in that merge. If you wish to unify your email addresses in the future or have other questions, please contact our support team by submitting a request. 11) I am using my software in an offline environment. Does this change affect me? Your access to your software will remain unaffected, you can continue using your pre-existing account user ID &amp password without change. If you choose to sign in to the websites for any of the CLO Virtual Fashion (CVF) products and services you will be prompted to merge your account into a CLO-SET account. Check out our detailed step-by-step guide HERE. 12) How do I change my password after I merge my accounts into a CLO-SET account? When you click 'Change Password' on the Marvelous Designer website or any CLO Virtual Fashion (CVF) product page, you will be redirected to the CLO-SET My Page, where you can change your password. If you are already on the CLO-SET website, you can change the password under the settings tab on My page. * If you are using a version of the software below 2024.0, your password for the software will not be synchronized with CLO-SET account. **See Question 13 if you want to change your password for an older version. 13) I'm using a version of Marvelous Designer that is below 2024.0 (Version 12,11,10, 9, etc). How do I change my password for my software login? If you have integrated into the CLO-SET account: contact us via the Marvelous Designer support team. If you dont have an integrated CLO-SET account: reset your password via the password reset page. 14) What happens to my subscription cycle if I change my account email? Changing your account email will NOT impact your subscription cycle or payment information. Please note that the email notifications on the renewal and payment confirmation will be sent to your original email registered at the point of subscription. 15) I have paid CLO-SET or CLO accounts, does this mean I get Marvelous Designer for free? No, the integration is only for login methods not purchasing and licensing. The paid CLO-SET and CLO services will remain separate from each other and require their own purchases for use. If you need assistance regarding accounts merging or have questions, please submit a request, and our support team will promptly respond to your inquiry.",
+        "Tokens": 1366,
+        "SectionId": 9021931513103,
+        "Section": "Subscription",
+        "CategoryId": 8813833873167,
+        "Category": "Merge Accounts (Existing User)",
+        "YoutubeLinks": []
+    },
+    {
+        "ArticleId": "9021956463631",
+        "Source": "https://clovf.zendesk.com/hc/en-us/articles/9021956463631",
+        "Title": "Using CLO3D",
+        "Content": "Objective Access all CLO Virtual Fashion services using a single email account. This FAQ will cover the updates and changes to login methods for CLO Individual &amp Student license account types. This change will not affect Enterprise &amp Academic account types at this time. Please check the general FAQ if you have questions about the account merging process (CLO-SET accounts). Details 1) Change in login method Effective from the next released version, CLO 2024.0 What does this cover? CLO website / Software version 2024.0 and above Software Version (7.3 and below) Software Version Above 2024.0 How to login Existing User ID &amp Password CLO-SET User ID &amp Password 2) How do I get a CLO-SET User ID &amp Password if I have an existing CLO account? Check out our detailed step-by-step guide here. 3) What is the difference between a CLO-SET account and my previous CLO account? With your old CLO account you had to have multiple logins to access all of the CLO Virtual Fashion (CVF) products and services. Now with one CLO-SET account you can access all CLO Virtual Fashion services without additional logins. 4) How do I login to CLO / Marvelous Designer / Jinny after I merge my account? You can login to CLO / Marvelous Designer / Jinny with your CLO-SET ID &amp Password. 5) I have a subscription license for CLO and I like to use an older version than 2024.0. Do I have to use a different Log in or can I use the CLO-SET account? If you have an old installer on your device and you have access to versions below 2024.0: Use the older login method. Login to the installed version you wish to use with your User ID &amp Password (same as before) For 2024.0 and above: you can log in to all CLO Virtual Fashion product (CLO/Marvelous Designer/CONNECT/CLO-SET) websites and software with your CLO-SET account. 6) I have both CLO and Marvelous Designer accounts and I use them frequently. How does it affect me? You no longer have to use two separate logins! You can continue using your licenses without functional change for both CLO and Marvelous Designer. All you have to do is login with your CLO-SET account. You can check the license information for your products on the CLO or Marvelous Designer websites. 7) I like to use different email addresses for CLO and Marvelous Designer for my own reasons and want to keep them separate. Can I still have separate accounts? Yes, make sure to use the different email addresses for your CLO-SET merge so that you will have two separate CLO-SET accounts. The accounts are tied to each email address and the licenses associated with each account will be included in that merge. If you wish to unify your email addresses in the future or have other questions, please submit a request. 8) I am using my software in an offline environment. Does this change affect me? Your access to your software will remain unaffected, you can continue using your pre-existing account user ID &amp password without change. If you choose to login to the websites for any of the CLO Virtual Fashion (CVF) products and services you will be prompted to merge your account logins into a CLO-SET account. 9) How do I change my password after I merge my accounts into a CLO-SET account? When you click 'Change Password' on the CLO website or any CLO Virtual Fashion (CVF) product page, you will be redirected to the CLO-SET My Page, where you can change your password. If you are already on the CLO-SET website, you can change the password under the settings tab on My page. 10) What happens to my subscription cycle if I change my account email? Changing your account email will NOT impact your subscription cycle or payment information. Please note that the email notifications on the renewal and payment confirmation will be sent to your original email registered at the point of subscription. If you need assistance regarding accounts merging or questions, please submit a request, and our support team will promptly respond to your inquiry. #clo account #clo-set #account integration",
+        "Tokens": 908,
+        "SectionId": 9021931513103,
+        "Section": "Subscription",
+        "CategoryId": 8813833873167,
+        "Category": "Merge Accounts (Existing User)",
+        "YoutubeLinks": []
+    },
+    {
+        "ArticleId": "9021987313039",
+        "Source": "https://clovf.zendesk.com/hc/en-us/articles/9021987313039",
+        "Title": "Not receiving verification email",
+        "Content": "Double check the email address typed in. Make sure you do not have typos. If you are using your company email, please contact your IT team for any firewall setups. The verification email may be blocked from your company's email server settings, even before reaching your spam inbox. If you are still experiencing the issue, please submit a request for a manual verification process. Student Email: Some school domains block external emails. Please check if your school domain is connected to the verification email on Verify Email Address Link. If you see the result as \"Connecting did not work\", please ask your school admin (especially the technical division) to check if you could receive the verification email from noreply@clo-set.com Gmail Account: Mark incorrectly classified emails as Not spam. Go to your spam folder and open the email from noreply@clo-set.com. Click on the 'Report not spam' button at the top. Gmail uses machine learning to recognize spam. So you need to mark CLO-SET emails as not spam manually to let Gmail learn your behavior.",
+        "Tokens": 213,
+        "SectionId": 9021977069327,
+        "Section": "FAQ & Troubleshooting",
+        "CategoryId": 8813833873167,
+        "Category": "Merge Accounts (Existing User)",
+        "YoutubeLinks": []
+    },
+    {
+        "ArticleId": "9021974683279",
+        "Source": "https://clovf.zendesk.com/hc/en-us/articles/9021974683279",
+        "Title": "Individual vs. Enterprise License",
+        "Content": "Objective Understand the scope of Account Merging scheduled in Q1 of 2024. Am I an Individual or Enterprise? Individual Users Enterprise Users Details 1) Am I an Individual or Enterprise? In this article, the Individual vs. Enterprise classification is based on the type of subscription or license you have for CLO or Marvelous Designer. If you are unsure, check your account page in CLO and Marvelous Designer. Software Individual Enterprise CLO Standalone Standalone Onlineauth Network Network Onlineauth Marvelous Designer Personal Student Enterprise Standalone Enterprise Network (online/offline) Academic Network Online 2) Individual Users (Standalone, Personal License) From CLO 2024.0 and Marvelous 2024.0, all Individual/Personal users will be asked to merge their accounts. Account merging will be done based on your email address registered on your current account. Once the account merging is complete, you can start logging into CLO 2024.0 and Marvelous 2024.0 software with the merged account instead of the user ID. 3) Enterprise Users If you are using an Enterprise license for CLO or Marvelous Designer, you do NOT have to take any immediate action. The account merging will NOT impact your software log-in process. You may continue using the same user ID between your team when logging into CLO or Marvelous Designer. For CLO-SET users, you will be directed to go through the account merging process. Completing the process will NOT impact your log in experience for CLO, Marvelous Designer, or CLO-SET.",
+        "Tokens": 321,
+        "SectionId": 9021928318863,
+        "Section": "General",
+        "CategoryId": 8813833873167,
+        "Category": "Merge Accounts (Existing User)",
+        "YoutubeLinks": []
+    },
+    {
+        "ArticleId": "9021965465231",
+        "Source": "https://clovf.zendesk.com/hc/en-us/articles/9021965465231",
+        "Title": "Using CLO-SET & CONNECT",
+        "Content": "Objective Understand how to keep using CLO-SET &amp CONNECT upon completing the account merging process. Using CLO-SET Using CONNECT Troubleshooting &amp FAQ *Please note: the All CLO-SET users must follow the account integration process from Feb 20th, 2024. However, it will NOT immediately impact your software usage. For Individual/Personal users, you will start utilizing your CLO-SET account to access the software from the new 2024.0 version release. For Enterprise users, this change does not apply and you do not have any immediate action to take. Find the Individual vs. Enterprise classification rule HERE. Details 1) Using CLO-SET Merging your account will NOT affect your CLO-SET usage or subscription status. You will continue having access to the Groups you are invited to, along with all the Assets you have permission to. Subscriptions &amp Payment In CLO-SET only the Group Admin (Account owner of the main Group) is responsible for the payment of an existing subscription. This will NOT change with the account merging process, and the account owner will still be held responsible within all members of the Group. Learn more about CLO-SET Group HERE. Using CLO &amp Marvelous Designer Your log in experience for CLO and Marvelous Designer will change upon the new major release of the 2024.0 version. For all Individual/Personal users, you will start using the new 2024.0 version with the CLO-SET account. For all Enterprise users, this will NOT be true and you do not have any immediate action to take. Find more info on whether you are an Individual or Enterprise user HERE. Using CONNECT CLO-SET, CONNECT, and JINNY accounts are the same. Therefore, merging your CLO-SET account would NOT impact your CONNECT usage, purchase history, or seller information. 2) Using CONNECT Merging your account will NOT affect your CONNECT usage or item history. You will continue having access to the items you sold/bought on the CONNECT marketplace. 3) Troubleshooting &amp FAQ Find more instructions on troubleshooting &amp FAQ HERE.",
+        "Tokens": 442,
+        "SectionId": 9021931513103,
+        "Section": "Subscription",
+        "CategoryId": 8813833873167,
+        "Category": "Merge Accounts (Existing User)",
+        "YoutubeLinks": []
+    }
+]

@@ -9,20 +9,20 @@ import fitz
 import questionary
 import requests
 import shortuuid
-from tools.environment import Environment
-from tools.misc import trim_tokens
 from tqdm import tqdm
+
+from tools.azureenv import AzureEnv
+from tools.misc import trim_tokens
 
 
 class PDF:
-
-    def __init__(self, environment: Environment):
+    def __init__(self, environment: AzureEnv):
         self.env = env
         self.brand = environment.brand
         self.language = environment.language
         self.pdf_path = environment.get_locale_path("pdf")
         self.udemy_path = os.path.join(environment.ai_search_dir, "clo3d", "udemy")
-        self.zendesk_article_api_endpoint = environment.get_zendesk_article_api_endpoint(1)
+        self.zendesk_article_api_endpoint = environment.get_zendesk_articles_api_endpoint(1)
         self.openai_helper = environment.openai_helper
         self.search_client = environment.search_client
 
@@ -30,8 +30,16 @@ class PDF:
         """Removes miscellaneous text from the PDF"""
 
         misc_text = [
-            'Copyright 2022', 'Copyright 2021', 'Copyright 2020', 'Copyright 2019', 'Copyright 2018', 'CLO Virtual Fashion Inc.', 'All Rights Reserved.',
-            'C L O V I R T U A L F A S H I O N', "STRICTLY CONFIDENTIAL", "CLO VIRTUAL FASHION"
+            "Copyright 2022",
+            "Copyright 2021",
+            "Copyright 2020",
+            "Copyright 2019",
+            "Copyright 2018",
+            "CLO Virtual Fashion Inc.",
+            "All Rights Reserved.",
+            "C L O V I R T U A L F A S H I O N",
+            "STRICTLY CONFIDENTIAL",
+            "CLO VIRTUAL FASHION",
         ]
 
         for text in misc_text:
@@ -46,7 +54,9 @@ class PDF:
             "Content-Type": "application/json",
         }
 
-        response = requests.request("GET", zendesk_article_attachment_api_endpoint, auth=("share_admin@foxxing.com", "CLOzendeskshare12#$"), headers=headers)
+        response = requests.request(
+            "GET", zendesk_article_attachment_api_endpoint, auth=("share_admin@foxxing.com", "CLOzendeskshare12#$"), headers=headers
+        )
 
         json_objects = json.loads(response.text)
 
@@ -76,7 +86,7 @@ class PDF:
     def add_labels(env, brand, language, pdf_path, file):
         print(f"Adding labels to: {file}")
 
-        environment = Environment(env, brand, language)
+        environment = AzureEnv(env, brand, language)
 
         with open(os.path.join(pdf_path, file), "r", encoding="utf-8") as f:
             documents = json.load(f)
@@ -104,18 +114,21 @@ class PDF:
         """Retrieves all articles with PDF attachments and stores them in a JSON"""
         print(f"Getting Zendesk Articles for page: {page}")
 
-        environment = Environment(env, brand, language)
+        environment = AzureEnv(env, brand, language)
 
-        page_url = requests.request("GET", environment.get_zendesk_article_api_endpoint(page), headers={
-            "Content-Type": "application/json",
-        })
+        page_url = requests.request(
+            "GET",
+            environment.get_zendesk_articles_api_endpoint(page),
+            headers={
+                "Content-Type": "application/json",
+            },
+        )
 
         json_objects = json.loads(page_url.text)
 
         documents = []
         for article in json_objects["articles"]:
             if article["draft"] == False and article["user_segment_id"] == None:
-
                 article["id"] = str(article["id"])
 
                 article["pdf"] = ""
@@ -130,7 +143,15 @@ class PDF:
                         else:
                             article["html_url"] = re.findall(r"https:\/\/support\.clo3d\.com\/hc\/en-us\/articles\/\d+", article["html_url"])[0]
 
-                        documents.append({"ArticleId": article["id"], "Title": article["title"], "Source": article["html_url"], "PDF_URL": pdf_url, "PDF_Text": article["pdf"]})
+                        documents.append(
+                            {
+                                "ArticleId": article["id"],
+                                "Title": article["title"],
+                                "Source": article["html_url"],
+                                "PDF_URL": pdf_url,
+                                "PDF_Text": article["pdf"],
+                            }
+                        )
 
         if len(documents) > 0:
             with open(os.path.join(pdf_path, f"page_{page}.json"), "w+", encoding="utf-8") as f:
@@ -138,25 +159,31 @@ class PDF:
             documents = []
 
     def mp_get_zendesk_articles_with_pdf(self):
-        response = requests.request("GET", self.zendesk_article_api_endpoint, headers={
-            "Content-Type": "application/json",
-        })
+        response = requests.request(
+            "GET",
+            self.zendesk_article_api_endpoint,
+            headers={
+                "Content-Type": "application/json",
+            },
+        )
 
         json_objects = json.loads(response.text)
         page_count = json_objects["page_count"]
 
         with multiprocessing.Pool(5) as p:
-            p.starmap_async(PDF.get_zendesk_articles_with_pdf, [(self.env, self.brand, self.language, self.pdf_path, page) for page in range(1, page_count + 1)])
+            p.starmap_async(
+                PDF.get_zendesk_articles_with_pdf, [(self.env, self.brand, self.language, self.pdf_path, page) for page in range(1, page_count + 1)]
+            )
             p.close()
             p.join()
 
     def get_udemy_pdfs(self):
         """Retrieves all articles with PDF attachments and stores them in a JSON"""
 
-        print(f"Getting Udemy PDFs")
+        print("Getting Udemy PDFs")
 
         documents = []
-        for file in glob.glob(os.path.join(self.udemy_path, '**/*.pdf'), recursive=True):
+        for file in glob.glob(os.path.join(self.udemy_path, "**/*.pdf"), recursive=True):
             pdf = fitz.open(file)
 
             file_name = os.path.basename(file)
@@ -169,22 +196,24 @@ class PDF:
 
             content = trim_tokens(PDF.remove_miscellaneous_text(trim_tokens((" ").join(content_chunks))))
 
-            documents.append({
-                "ArticleId": shortuuid.uuid(),
-                "Title": file_name,
-                "Source": "https://www.udemy.com/user/clo3d-virtual-fashion/",
-                "PDF_Text": content,
-                # "PDF_Summary": self.openai_helper.generate_pdf_summary(content),
-                "Labels": self.openai_helper.generate_labels(content),
-            })
+            documents.append(
+                {
+                    "ArticleId": shortuuid.uuid(),
+                    "Title": file_name,
+                    "Source": "https://www.udemy.com/user/clo3d-virtual-fashion/",
+                    "PDF_Text": content,
+                    # "PDF_Summary": self.openai_helper.generate_pdf_summary(content),
+                    "Labels": self.openai_helper.generate_labels(content),
+                }
+            )
 
-            with open(os.path.join(self.udemy_path, 'udemy_pdf.json'), "w", encoding="utf-8") as f:
+            with open(os.path.join(self.udemy_path, "udemy_pdf.json"), "w", encoding="utf-8") as f:
                 json.dump(documents, f, ensure_ascii=False, indent=4)
 
     def summarize_pdf(env, brand, language, pdf_path, file):
         print(f"Summarizing {file}")
 
-        environment = Environment(env, brand, language)
+        environment = AzureEnv(env, brand, language)
 
         with open(f"{os.path.join(pdf_path, file)}", "r", encoding="utf-8") as f:
             documents = json.load(f)
@@ -201,7 +230,11 @@ class PDF:
         file_paths = sorted(file_paths, key=lambda x: int(x.partition("_")[2].partition(".")[0]))
 
         with multiprocessing.Pool(5) as p:
-            p.starmap_async(PDF.summarize_pdf, [(self.env, self.brand, self.language, self.pdf_path, file) for file in file_paths], error_callback=lambda e: print(e))
+            p.starmap_async(
+                PDF.summarize_pdf,
+                [(self.env, self.brand, self.language, self.pdf_path, file) for file in file_paths],
+                error_callback=lambda e: print(e),
+            )
             p.close()
             p.join()
 
@@ -225,7 +258,7 @@ class PDF:
             self.search_client.upload_documents(documents)
 
     def upload_udemy_pdfs(self):
-        with open(os.path.join(self.udemy_path, 'udemy_pdf.json'), "r", encoding="utf-8") as f:
+        with open(os.path.join(self.udemy_path, "udemy_pdf.json"), "r", encoding="utf-8") as f:
             documents = json.load(f)
 
         for i, document in enumerate(documents):
@@ -245,10 +278,12 @@ class PDF:
 if __name__ == "__main__":
     env = questionary.select("Which environment?", choices=["prod", "dev"]).ask()
     brand = questionary.select("Which environment?", choices=["clo3d", "closet"]).ask()
-    task = questionary.select(f"What task?", choices=["Get Zendesk Articles With PDFs", "Get Udemy PDFs", "Summarize PDF", "Add Labels", "Upload PDFs", "Upload Udemy PDFs"]).ask()
+    task = questionary.select(
+        "What task?", choices=["Get Zendesk Articles With PDFs", "Get Udemy PDFs", "Summarize PDF", "Add Labels", "Upload PDFs", "Upload Udemy PDFs"]
+    ).ask()
     # language = questionary.select("What language?", choices=["English", "Korean"]).ask()
 
-    pdf = PDF(Environment(env, brand))
+    pdf = PDF(AzureEnv(env, brand))
 
     if task == "Get Zendesk Articles With PDFs":
         pdf.mp_get_zendesk_articles_with_pdf()

@@ -12,14 +12,14 @@ from pytube import Channel, Playlist, extract
 from tqdm import tqdm
 from youtube_transcript_api import YouTubeTranscriptApi
 
-from tools.environment import Environment
+from tools.azureenv import AzureEnv
 from tools.misc import check_create_directory, sanitize_directory_file_name, trim_tokens
 
 ssl._create_default_https_context = ssl._create_stdlib_context
 
 
 class YouTube:
-    def __init__(self, environment: Environment):
+    def __init__(self, environment: AzureEnv):
         self.env = environment.env
         self.brand = environment.brand
         self.language = environment.language
@@ -168,7 +168,7 @@ class YouTube:
         """Summarize every transcript inside a folder"""
         print("Summarizing: " + os.path.split(file_path)[1])
 
-        environment = Environment(env, brand, language)
+        environment = AzureEnv(env, brand, language)
 
         with open(file_path, "r", encoding="utf-8") as file:
             transcripts = json.load(file)
@@ -233,7 +233,7 @@ if __name__ == "__main__":
     ).ask()
     # language = questionary.select("What language?", choices=["English", "Korean"]).ask()
 
-    yt = YouTube(Environment(env, brand))
+    yt = YouTube(AzureEnv(env, brand))
 
     if task == "Get Youtube Channel Transcripts":
         yt.mp_extract_youtube_channel_transcripts()

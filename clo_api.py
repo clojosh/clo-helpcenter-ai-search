@@ -8,12 +8,12 @@ import questionary
 import requests
 import shortuuid
 
-from tools.environment import Environment
+from tools.azureenv import AzureEnv
 from tools.misc import trim_tokens
 
 
 class CLOAPI:
-    def __init__(self, environment: Environment):
+    def __init__(self, environment: AzureEnv):
         self.environment = environment
         self.search_client = environment.search_client
         self.clo_api_path = os.path.join(environment.ai_search_dir, "clo_api")
@@ -205,7 +205,7 @@ if __name__ == "__main__":
         ],
     ).ask()
 
-    clo_api = CLOAPI(Environment(env, "clo3d"))
+    clo_api = CLOAPI(AzureEnv(env, "clo3d"))
 
     if task == "Parse API Docs":
         delete_previous_documents = questionary.select("Did you delete previous documents?", choices=["Yes", "No"]).ask()

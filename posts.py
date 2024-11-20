@@ -6,12 +6,13 @@ from datetime import datetime
 
 import questionary
 import requests
-from tools.environment import Environment
+
+from tools.azureenv import AzureEnv
 from tools.misc import remove_html_tags, trim_tokens
 
 
 class Posts:
-    def __init__(self, environment: Environment):
+    def __init__(self, environment: AzureEnv):
         self.env = environment.env
         self.brand = environment.brand
         self.language = environment.language
@@ -28,9 +29,7 @@ class Posts:
             "GET",
             comments_endpoint.format(brand=brand, post_id=post_id),
             auth=(
-                "share_admin@foxxing.com"
-                if brand == "clo3d"
-                else "joshua.lee@clo3d.com",
+                "share_admin@foxxing.com" if brand == "clo3d" else "joshua.lee@clo3d.com",
                 "CLOzendeskshare12#$",
             ),
             headers={
@@ -77,9 +76,7 @@ class Posts:
 
                 comment_objects = json.loads(next_page.text)
 
-        filter_official_comments = [
-            comment for comment in comments if comment["official"] == True
-        ]
+        filter_official_comments = [comment for comment in comments if comment["official"] == True]
         if len(filter_official_comments) > 0:
             return filter_official_comments
 
@@ -101,9 +98,7 @@ class Posts:
         posts_objects = json.loads(posts_response.text)
 
         posts = []
-        cutoff_date = datetime.strptime(
-            "{}-01-01T00:00:00Z".format(datetime.today().year - 3), "%Y-%m-%dT%H:%M:%SZ"
-        )
+        cutoff_date = datetime.strptime("{}-01-01T00:00:00Z".format(datetime.today().year - 3), "%Y-%m-%dT%H:%M:%SZ")
         for post in posts_objects["posts"]:
             created_at = datetime.strptime(post["created_at"], "%Y-%m-%dT%H:%M:%SZ")
 
@@ -126,9 +121,7 @@ class Posts:
                         "post_url": post_url,
                         "post_details": trim_tokens(remove_html_tags(post["details"])),
                         "created_at": post["created_at"],
-                        "comments": Posts.get_comments(
-                            brand, comments_endpoint, post["id"]
-                        ),
+                        "comments": Posts.get_comments(brand, comments_endpoint, post["id"]),
                     }
                 )
 
@@ -180,7 +173,7 @@ class Posts:
 
         print(f"Uploading {file}")
 
-        environment = Environment(env, brand, language)
+        environment = AzureEnv(env, brand, language)
         search_client = environment.search_client
         openai_helper = environment.openai_helper
 
@@ -203,14 +196,8 @@ class Posts:
                             "Content": content,
                             "Labels": [],
                             "YoutubeLinks": [],
-                            "titleVector": openai_helper.generate_embeddings(
-                                text=document["post_title"]
-                            ),
-                            "contentVector": openai_helper.generate_embeddings(
-                                text=content
-                                if content != ""
-                                else document["post_title"]
-                            ),
+                            "titleVector": openai_helper.generate_embeddings(text=document["post_title"]),
+                            "contentVector": openai_helper.generate_embeddings(text=content if content != "" else document["post_title"]),
                         }
                     )
                 except Exception:
@@ -227,9 +214,7 @@ class Posts:
 
         upload_posts_params = []
         for file in file_paths:
-            upload_posts_params.append(
-                (self.env, self.posts_path, file, self.brand, self.language)
-            )
+            upload_posts_params.append((self.env, self.posts_path, file, self.brand, self.language))
 
         with multiprocessing.Pool(5) as p:
             p.starmap_async(
@@ -244,12 +229,10 @@ class Posts:
 if __name__ == "__main__":
     env = questionary.select("Which environment?", choices=["prod", "dev"]).ask()
     brand = questionary.select("Which brand?", choices=["clo3d", "closet", "md"]).ask()
-    task = questionary.select(
-        "What task?", choices=["Get Posts", "Add Labels", "Upload Posts"]
-    ).ask()
+    task = questionary.select("What task?", choices=["Get Posts", "Add Labels", "Upload Posts"]).ask()
     # language = questionary.select("What language?", choices=["English", "Korean"]).ask()
 
-    post = Posts(Environment(env, brand))
+    post = Posts(AzureEnv(env, brand))
 
     if task == "Get Posts":
         post.mp_get_posts()

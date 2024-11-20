@@ -8,7 +8,7 @@ from pathlib import Path
 import questionary
 import requests
 
-from tools.environment import Environment
+from tools.azureenv import AzureEnv
 from tools.misc import (
     extract_youtube_links,
     get_section_and_category,
@@ -20,23 +20,31 @@ from tools.misc import (
 
 
 class Article:
-    def __init__(self, environment: Environment):
-        self.environment = environment
-        self.env = environment.env
-        self.brand = environment.brand
-        self.search_client = environment.search_client
-        self.article_path = environment.get_locale_path("articles")
-        self.zendesk_article_api_endpoint = environment.get_zendesk_article_api_endpoint(1)
-        self.language = environment.language
+    def __init__(self, azure_env: AzureEnv):
+        self.azure_env = azure_env
+        self.search_client = azure_env.search_client
+        self.article_path = azure_env.get_locale_path("articles")
+        self.zendesk_article_api_endpoint = azure_env.get_zendesk_articles_api_endpoint(1)
 
-    def get_zendesk_documents(env, brand, language, article_path, page):
+    def get_zendesk_document(self, article_id):
+        page_url = requests.request(
+            "GET",
+            self.azure_env.get_zendesk_article_api_endpoint(article_id),
+            headers={
+                "Content-Type": "application/json",
+            },
+        )
+
+        print(page_url.text)
+
+    def get_zendesk_documents(stage, brand, language, article_path, page):
         print("Getting Zendesk Articles for page: " + str(page))
 
-        environment = Environment(env, brand, language)
+        azure_env = AzureEnv(stage, brand, language)
 
         page_url = requests.request(
             "GET",
-            environment.get_zendesk_article_api_endpoint(page),
+            azure_env.get_zendesk_articles_api_endpoint(page),
             headers={
                 "Content-Type": "application/json",
             },
@@ -77,7 +85,7 @@ class Article:
                 article["body"] = trim_tokens(article["body"])
                 article["id"] = str(article["id"])
                 article["section_id"], article["section"], article["category_id"], article["category"] = get_section_and_category(
-                    environment, article["section_id"]
+                    azure_env, article["section_id"]
                 )
 
                 documents.append(
@@ -111,7 +119,7 @@ class Article:
         with multiprocessing.Pool(5) as p:
             p.starmap_async(
                 Article.get_zendesk_documents,
-                [(self.env, self.brand, self.language, self.article_path, page) for page in range(1, 1 + page_count)],
+                [(self.azure_env.stage, self.azure_env.brand, self.azure_env.language, self.article_path, page) for page in range(1, 1 + page_count)],
                 error_callback=lambda e: print(e),
             )
             p.close()
@@ -120,8 +128,7 @@ class Article:
     def upload_documents(env, brand, language, article_path, file):
         print(f"Uploading {file}")
 
-        environment = Environment(env, brand, language)
-        openai_helper = environment.openai_helper
+        azure_env = AzureEnv(env, brand, language)
 
         with open(os.path.join(article_path, file), "r", encoding="utf-8") as f:
             documents = json.load(f)
@@ -131,8 +138,8 @@ class Article:
                     document["Content"] = document["Title"]
 
                 documents[i]["@search.action"] = "mergeOrUpload"
-                documents[i]["TitleVector"] = openai_helper.generate_embeddings(text=document["Title"])
-                documents[i]["ContentVector"] = openai_helper.generate_embeddings(text=document["Content"])
+                documents[i]["TitleVector"] = azure_env.openai_helper.generate_embeddings(text=document["Title"])
+                documents[i]["ContentVector"] = azure_env.openai_helper.generate_embeddings(text=document["Content"])
                 del documents[i]["Tokens"]
                 del documents[i]["SectionId"]
                 del documents[i]["Section"]
@@ -141,17 +148,17 @@ class Article:
 
             if brand == "clovf":
                 # Upload clovf articles to both clo3d and clo-set
-                # Environment(env, "clo3d").search_client.upload_documents(documents)
-                Environment(env, "closet").search_client.upload_documents(documents)
+                AzureEnv(env, "clo3d").search_client.upload_documents(documents)
+                # AzureEnv(env, "closet").search_client.upload_documents(documents)
             else:
-                environment.search_client.upload_documents(documents)
+                azure_env.search_client.upload_documents(documents)
 
     def mp_upload_documents(self):
         file_paths = sorted(os.listdir(self.article_path), key=lambda x: int(x.partition("_")[2].partition(".")[0]))
 
         upload_documents_params = []
         for file in file_paths:
-            upload_documents_params.append((self.env, self.brand, self.language, self.article_path, file))
+            upload_documents_params.append((self.azure_env.stage, self.azure_env.brand, self.azure_env.language, self.article_path, file))
 
         with multiprocessing.Pool(5) as p:
             p.starmap_async(Article.upload_documents, upload_documents_params, error_callback=lambda e: print(e))
@@ -177,7 +184,7 @@ class Article:
         page_count = json_objects["page_count"]
 
         for page in range(1, 1 + page_count):
-            response = requests.request("GET", self.environment.get_zendesk_article_api_endpoint(page), headers=headers)
+            response = requests.request("GET", self.azure_env.get_zendesk_articles_api_endpoint(page), headers=headers)
             json_objects = json.loads(response.text)
             articles = json_objects["articles"]
 
@@ -195,13 +202,16 @@ class Article:
 
 
 if __name__ == "__main__":
-    env = questionary.select("Which environment?", choices=["prod", "dev"]).ask()
+    stage = questionary.select("Which stage?", choices=["prod", "dev"]).ask()
     brand = questionary.select("Which brand?", choices=["clo3d", "closet", "clovf", "md"]).ask()
-    task = questionary.select("What task?", choices=["Get Zendesk Articles", "Delete Articles", "Upload Articles"]).ask()
+    task = questionary.select("What task?", choices=["Get Zendesk Article", "Get All Zendesk Articles", "Delete Articles", "Upload Articles"]).ask()
+    article = Article(AzureEnv(stage, brand))
 
-    article = Article(Environment(env, brand))
+    if task == "Get Zendesk Article":
+        article_id = questionary.text("Article ID").ask()
+        article.get_zendesk_document(article_id=article_id)
 
-    if task == "Get Zendesk Articles":
+    elif task == "Get All Zendesk Articles":
         article.mp_get_zendesk_documents()
 
     elif task == "Upload Articles":

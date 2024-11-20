@@ -29,13 +29,13 @@ from azure.search.documents.indexes.models import (
 )
 from tqdm import tqdm
 
-from tools.environment import Environment
+from tools.azureenv import AzureEnv
 
 backend_dir = Path(__file__).parent
 
 
 class AISearch:
-    def __init__(self, environment: Environment):
+    def __init__(self, environment: AzureEnv):
         self.environment = environment
         self.search_client = environment.search_client
         self.search_index_client = environment.search_index_client
@@ -366,6 +366,19 @@ class AISearch:
             for url, count in sources_count.items():
                 print(f"{url}: {count}")
 
+    def find_missing_documents_per_source(self):
+        with open(os.path.join(backend_dir, "indexes", "prod", "clo3d-index-english.json"), "r", encoding="utf-8") as f:
+            prod_documents = json.load(f)
+
+        with open(os.path.join(backend_dir, "indexes", "dev", "clo3d-index-english.json"), "r", encoding="utf-8") as f:
+            dev_documents = json.load(f)
+
+            prod_sources = [prod_document["Source"] for prod_document in prod_documents]
+            dev_sources_not_in_prod = set([dev_document["Source"] for dev_document in dev_documents if dev_document["Source"] not in prod_sources])
+
+            for source in sorted(dev_sources_not_in_prod):
+                print(source)
+
 
 if __name__ == "__main__":
     env = questionary.select("Which environment?", choices=["prod", "dev"]).ask()
@@ -383,7 +396,7 @@ if __name__ == "__main__":
         ],
     ).ask()
 
-    cognitive_search = AISearch(Environment(env, brand))
+    cognitive_search = AISearch(AzureEnv(env, brand))
 
     if task == "Create Search Index":
         index_name = questionary.text("Index Name?").ask()
@@ -405,7 +418,12 @@ if __name__ == "__main__":
             cognitive_search.text_search(search_text)
         elif search_type == "Vector":
             cognitive_search.vector_search(search_text)
+
     elif task == "Delete Posts":
         cognitive_search.delete_posts()
+
     elif task == "Get Document Source Breakdown":
         cognitive_search.document_source_breakdown()
+
+    elif task == "Find Missing Documents Per Source":
+        cognitive_search.find_missing_documents_per_source()

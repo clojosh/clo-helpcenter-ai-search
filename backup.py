@@ -5,11 +5,11 @@ from azure.core.credentials import AzureKeyCredential
 from azure.identity import DefaultAzureCredential
 from azure.search.documents import SearchClient
 from azure.search.documents.indexes import SearchIndexClient
-from tools.environment import Environment
+
+from tools.azureenv import AzureEnv
 
 
 class BackupAISearch:
-
     def __init__(self, source_endpoint, source_credential, source_index_name, target_endpoint, target_credential, target_index_name):
         self.source_endpoint = source_endpoint
         self.source_credential = source_credential
@@ -40,7 +40,9 @@ class BackupAISearch:
                     last_item = None
 
             if last_item:
-                response = search_client.search(search_text="*", top=100000, order_by=key_field_name, filter=f"{key_field_name} gt '{last_item[key_field_name]}'").by_page()
+                response = search_client.search(
+                    search_text="*", top=100000, order_by=key_field_name, filter=f"{key_field_name} gt '{last_item[key_field_name]}'"
+                ).by_page()
             else:
                 break
 
@@ -68,7 +70,9 @@ class BackupAISearch:
             raise Exception("Key Field Not Found")
 
         if len(non_retrievable_fields) > 0:
-            print(f"WARNING: The following fields are not marked as retrievable and cannot be backed up and restored: {', '.join(f.name for f in non_retrievable_fields)}")
+            print(
+                f"WARNING: The following fields are not marked as retrievable and cannot be backed up and restored: {', '.join(f.name for f in non_retrievable_fields)}"
+            )
 
         # Create target index with the same definition
         source_index.name = target_index_name
@@ -79,7 +83,11 @@ class BackupAISearch:
         if not can_use_filter:
             print("WARNING: The key field is not filterable or not sortable. A maximum of 100,000 records can be backed up and restored.")
         # Backup and restore documents
-        all_documents = self.search_results_with_filter(source_search_client, key_field.name) if can_use_filter else self.search_results_without_filter(source_search_client)
+        all_documents = (
+            self.search_results_with_filter(source_search_client, key_field.name)
+            if can_use_filter
+            else self.search_results_without_filter(source_search_client)
+        )
 
         print("Backing up and restoring documents:")
         failed_documents = 0
@@ -106,7 +114,7 @@ class BackupAISearch:
 
 
 if __name__ == "__main__":
-    environment = Environment("dev", "md")
+    environment = AzureEnv("dev", "md")
 
     # Variables not used here do not need to be updated in your .env file
     source_endpoint = environment.SEARCH_CLIENT_ENDPOINT
@@ -120,5 +128,6 @@ if __name__ == "__main__":
 
     backup = BackupAISearch(source_endpoint, source_credential, source_index_name, target_endpoint, target_credential, target_index_name)
 
-    source_search_client, target_search_client, all_documents = backup.backup_and_restore_index(source_endpoint, source_credential, source_index_name, target_endpoint,
-                                                                                                target_credential, target_index_name)
+    source_search_client, target_search_client, all_documents = backup.backup_and_restore_index(
+        source_endpoint, source_credential, source_index_name, target_endpoint, target_credential, target_index_name
+    )
