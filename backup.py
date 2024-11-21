@@ -6,7 +6,7 @@ from azure.identity import DefaultAzureCredential
 from azure.search.documents import SearchClient
 from azure.search.documents.indexes import SearchIndexClient
 
-from tools.azureenv import AzureEnv
+from tools.azure_env import AzureEnv
 
 
 class BackupAISearch:

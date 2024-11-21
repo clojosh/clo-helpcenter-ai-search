@@ -29,17 +29,17 @@ from azure.search.documents.indexes.models import (
 )
 from tqdm import tqdm
 
-from tools.azureenv import AzureEnv
+from tools.azure_env import AzureEnv
 
 backend_dir = Path(__file__).parent
 
 
 class AISearch:
-    def __init__(self, environment: AzureEnv):
-        self.environment = environment
-        self.search_client = environment.search_client
-        self.search_index_client = environment.search_index_client
-        self.openai_helper = environment.openai_helper
+    def __init__(self, azure_env: AzureEnv):
+        self.azure_env = azure_env
+        self.search_client = azure_env.search_client
+        self.search_index_client = azure_env.search_index_client
+        self.openai_helper = azure_env.openai_helper
 
     def text_search(self, text):
         results = self.search_client.search(search_text=text)
@@ -233,102 +233,88 @@ class AISearch:
         print(f" {result.name} created")
 
     def drop_search_index(self):
-        self.search_index_client.delete_index(self.environment.INDEX_NAME)
-        print(f"{self.environment.INDEX_NAME} deleted")
+        self.search_index_client.delete_index(self.azure_env.INDEX_NAME)
+        print(f"{self.azure_env.INDEX_NAME} deleted")
 
-    def delete_all_documents(self):
-        results = self.search_client.search(
-            search_text="*",
-            select=["ArticleId"],
-        )
-        results_list = list(results)
+    def find_documents(self, search_fields: list = [], search_text: str = "*", select: list = [], log_results: bool = False):
+        results = self.azure_env.search_client.search(search_fields=search_fields, search_text=search_text, select=select, search_mode="all")
 
-        for i, result in enumerate(results_list):
+        documents = []
+        for result in results:
+            document = {}
+            for i, field in enumerate(select):
+                document[field] = result[field].strip()
+
+                if log_results:
+                    if i == 0:
+                        print("\n")
+
+                    print(f"{field}:\n{result[field]}")
+
+            documents.append(document)
+
+        return documents
+
+    def delete_documents(self, search_fields: list = [], search_text: str = "*", select: list = []):
+        if "ArticleId" not in select:
+            select.append("ArticleId")
+
+        results = self.find_documents(search_fields=search_fields, search_text=search_text, select=select)
+
+        print("Documents Deleted: ", len(results))
+
+        for i, result in enumerate(results):
             print(f"Deleting {result['ArticleId']}")
             self.search_client.upload_documents({"@search.action": "delete", "ArticleId": str(result["ArticleId"])})
 
-    def get_documents(self, brand="clo3d", file_type="json"):
-        results = self.search_client.search(
-            search_text="*",
-            select=["ArticleId", "Title", "Content", "Source", "YoutubeLinks"],
-        )
-        results_list = list(results)
+    def get_documents(self, search_fields: list = [], search_text: str = "*", select: list = [], file_type: str = "json"):
+        results = self.find_documents(search_fields=search_fields, search_text=search_text, select=select, log_results=log_results)
 
         if file_type == "csv":
-            fields = [
-                "ArticleId",
-                "Title",
-                "Content",
-                "Source",
-                "titleVector",
-                "contentVector",
-            ]
+            fields = ["ArticleId", "Title", "Content", "Source", "YoutubeLinks"]
             with open(os.path.join(backend_dir, "indexes", f"{brand}-index-english.csv"), "w", encoding="utf-8") as f:
                 write = csv.writer(f)
                 write.writerow(fields)
 
-                pbar = tqdm(results_list, position=1, leave=False, colour="red")
+                pbar = tqdm(results, position=1, leave=False, colour="red")
                 for i, result in enumerate(pbar):
-                    write.writerows(
-                        [
-                            [
-                                result["ArticleId"],
-                                result["Title"],
-                                result["Content"],
-                                result["Source"],
-                                result["titleVector"],
-                                result["contentVector"],
-                            ]
-                        ]
-                    )
+                    write.writerows([[result["ArticleId"], result["Title"], result["Content"], result["Source"], "YoutubeLinks"]])
         else:
-            for i, result in enumerate(results_list):
+            for i, result in enumerate(results):
                 del result["@search.score"]
                 del result["@search.reranker_score"]
                 del result["@search.highlights"]
                 del result["@search.captions"]
 
-                results_list[i] = {
+                results[i] = {
                     "ArticleId": result["ArticleId"],
                     "Title": result["Title"],
                     "Content": result["Content"],
                     "Source": result["Source"],
                     "YoutubeLinks": result["YoutubeLinks"],
-                    # "Labels": result["Label"],
-                    # "titleVector": result["titleVector"],
-                    # "contentVector": result["contentVector"],
                 }
 
-            if not os.path.exists(os.path.join(backend_dir, "indexes", self.environment.env)):
-                os.makedirs(os.path.join(backend_dir, "indexes", self.environment.env), exist_ok=True)
+            if not os.path.exists(os.path.join(backend_dir, "indexes", self.azure_env.stage)):
+                os.makedirs(os.path.join(backend_dir, "indexes", self.azure_env.stage), exist_ok=True)
 
-            with open(os.path.join(backend_dir, "indexes", self.environment.env, f"{brand}-index-english.json"), "w+", encoding="utf-8") as f:
-                json.dump(results_list, f, ensure_ascii=False, indent=4)
+            with open(os.path.join(backend_dir, "indexes", self.azure_env.stage, f"{brand}-index-english.json"), "w+", encoding="utf-8") as f:
+                json.dump(results, f, ensure_ascii=False, indent=4)
 
-    def upload_documents(self):
-        with open(os.path.join(backend_dir, "indexes", "clo3d-index-english.json"), "r", encoding="utf-8") as f:
+    def delete_posts(self, index_path: str, age: int = 3):
+        """
+        Delete posts from the AI Search index older than the age(years).
+
+        Args:
+            index_path (str): Path to the json file containing the index.
+            age (int, optional): The age in years of posts to delete. Defaults to 3.
+        """
+
+        with open(index_path, "r", encoding="utf-8") as f:
             documents = json.load(f)
 
-            documents_to_upload = []
-            for i, document in enumerate(tqdm(documents)):
-                if document["Content"] == "":
-                    continue
-
-                documents[i]["@search.action"] = "mergeOrUpload"
-                documents[i]["TitleVector"] = self.environment.openai_helper.generate_embeddings(text=document["Title"])
-                documents[i]["ContentVector"] = self.environment.openai_helper.generate_embeddings(text=document["Content"])
-
-                documents_to_upload.append(documents[i])
-
-                if i != 0 and (i % 100 == 0 or i == len(documents) - 1):
-                    self.search_client.upload_documents(documents_to_upload)
-                    documents_to_upload = []
-
-    def delete_posts(self):
-        with open("clo3d-index-english.json", "r", encoding="utf-8") as f:
-            documents = json.load(f)
-
+            # Loop through the documents and check the created_at date
             for i, document in enumerate(documents):
+                # Get the post from the Zendesk API
                 response = requests.request(
                     "GET",
                     f"https://support.clo3d.com/api/v2/community/posts/{document['ArticleId']}",
@@ -340,12 +326,16 @@ class AISearch:
                 posts_json = json.loads(response.text)
                 # print(posts_json)
 
+                # Convert the created_at date to a datetime object
                 created_at = datetime.strptime(posts_json["post"]["created_at"], "%Y-%m-%dT%H:%M:%SZ")
+
+                # Set the cutoff date to 3 years ago
                 cutoff_date = datetime.strptime(
-                    "{}-01-01T00:00:00Z".format(datetime.today().year - 3),
+                    "{}-01-01T00:00:00Z".format(datetime.today().year - age),
                     "%Y-%m-%dT%H:%M:%SZ",
                 )
 
+                # If the created_at date is less than the cutoff date, delete the post
                 if created_at < cutoff_date:
                     print(f"Deleting {document['ArticleId']}")
                     self.search_client.upload_documents(
@@ -356,7 +346,7 @@ class AISearch:
                     )
 
     def document_source_breakdown(self):
-        with open(os.path.join(backend_dir, "indexes", self.environment.env, "clo3d-index-english.json"), "r", encoding="utf-8") as f:
+        with open(os.path.join(backend_dir, "indexes", self.azure_env.stage, "clo3d-index-english.json"), "r", encoding="utf-8") as f:
             documents = json.load(f)
 
             sources = [document["Source"][: document["Source"].rfind("/")] for document in documents]
@@ -388,10 +378,11 @@ if __name__ == "__main__":
         choices=[
             "Create Search Index",
             "Delete Search Index",
-            "Delete All Documents",
             "Get Documents",
-            "Search Documents",
-            "Delete Posts",
+            "Search Documents (Hybrid, Text, or Vector)",
+            "Find Documents",
+            "Delete Documents",
+            "Delete Posts By Age",
             "Get Document Source Breakdown",
         ],
     ).ask()
@@ -401,17 +392,26 @@ if __name__ == "__main__":
     if task == "Create Search Index":
         index_name = questionary.text("Index Name?").ask()
         cognitive_search.create_search_index(index_name)
+
     elif task == "Delete Search Index":
         cognitive_search.drop_search_index()
-    elif task == "Delete All Documents":
-        cognitive_search.delete_all_documents()
-    elif task == "Get Documents":
-        cognitive_search.get_documents(brand)
+
+    elif task in ["Delete Documents", "Get Documents", "Find Documents"]:
+        search_fields = questionary.checkbox("Search Fields?", choices=["ArticleId", "Title", "Source", "Content"]).ask()
+        search_text = questionary.text("Search Text?").ask()
+        select = questionary.checkbox("Select?", choices=["ArticleId", "Title", "Source", "Content"]).ask()
+
+        if task == "Delete Documents":
+            cognitive_search.delete_documents(search_fields=search_fields, search_text=search_text, select=select)
+        elif task == "Get Documents":
+            cognitive_search.get_documents(search_fields=search_fields, search_text=search_text, select=select)
+        elif task == "Find Documents":
+            cognitive_search.find_documents(search_fields=search_fields, search_text=search_text, select=select, log_results=True)
+
     elif task == "Search Documents":
         search_type = questionary.select("Search Type?", choices=["Hybrid", "Text", "Vector"]).ask()
+        search_text = questionary.text("Search Text?", default="*").ask()
 
-        print("Enter Search Text:")
-        search_text = input()
         if search_type == "Hybrid":
             cognitive_search.hybrid_search(search_text)
         elif search_type == "Text":
@@ -419,8 +419,9 @@ if __name__ == "__main__":
         elif search_type == "Vector":
             cognitive_search.vector_search(search_text)
 
-    elif task == "Delete Posts":
-        cognitive_search.delete_posts()
+    elif task == "Delete Posts By Age":
+        age = questionary.text("Age(in years)?", default="3").ask()
+        cognitive_search.delete_posts(os.path.join(backend_dir, "indexes", env, "clo3d-index-english.json"), age=age)
 
     elif task == "Get Document Source Breakdown":
         cognitive_search.document_source_breakdown()

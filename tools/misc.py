@@ -1,4 +1,5 @@
 import json
+import logging
 import os
 import re
 import sys
@@ -10,7 +11,26 @@ import tiktoken
 from tqdm import tqdm
 
 
-def num_tokens_from_string(string: str, model: str) -> int:
+def logger(title: str = "", text: str = "") -> None:
+    """
+    Logs a message.
+
+    Args:
+        title (str, optional): The title of the message. Defaults to "".
+        text (str, optional): The text of the message. Defaults to "".
+    """
+    if title and text:
+        # Log the title and text in green color
+        logging.info("\033[92m" + title + "\033[0m" + "\n" + str(text))
+    elif title:
+        # Log the title in green color
+        logging.info("\033[92m" + title + "\033[0m")
+    else:
+        # Log the text
+        logging.info(str(text))
+
+
+def num_tokens_from_string(string: str, model: str = "gpt-4o-mini") -> int:
     """Returns the number of tokens in a text string. https://github.com/openai/openai-cookbook/blob/main/examples/How_to_count_tokens_with_tiktoken.ipynb"""
     encoding = tiktoken.encoding_for_model(model)
     num_tokens = len(encoding.encode(string))

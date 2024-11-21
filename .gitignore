@@ -151,3 +151,4 @@ sources/
 .env.dev
 .env.prod
 indexes/
+*.json

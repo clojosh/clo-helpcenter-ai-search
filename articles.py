@@ -8,7 +8,7 @@ from pathlib import Path
 import questionary
 import requests
 
-from tools.azureenv import AzureEnv
+from tools.azure_env import AzureEnv
 from tools.misc import (
     extract_youtube_links,
     get_section_and_category,

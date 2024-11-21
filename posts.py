@@ -7,7 +7,7 @@ from datetime import datetime
 import questionary
 import requests
 
-from tools.azureenv import AzureEnv
+from tools.azure_env import AzureEnv
 from tools.misc import remove_html_tags, trim_tokens
 
 

@@ -8,7 +8,7 @@ import questionary
 import requests
 import shortuuid
 
-from tools.azureenv import AzureEnv
+from tools.azure_env import AzureEnv
 from tools.misc import trim_tokens
 
 

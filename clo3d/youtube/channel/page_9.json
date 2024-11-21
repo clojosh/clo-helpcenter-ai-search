@@ -1,0 +1,272 @@
+[
+    {
+        "ArticleId": "JrBYUQjHz3k6CyEyvPGt9M",
+        "VideoId": "E2efp7NdIgA",
+        "Source": "https://www.youtube.com/watch?v=E2efp7NdIgA",
+        "Title": "360° animation in CLO (full tutorial on channel)",
+        "publishedAt": "2023-10-17T14:00:14Z",
+        "Transcript": "take any clo garment and create a 360 Dee turntable animation you just need to select any style that you've already made in CL turn on render and see that I actually already have my render ready to go I'm set to a turntable image we are going to check save video off I'm just going to click on transparency and image format will need to be PNG for transparency Click My Stop interactive render and then go ahead and hit play opening up medium encoder I'm going to click on this plus button to add our images under my settings I'm going to go with animated gif and next here under animated gif with transparency just hitting this green play button media encoder is stitching all of those images together open up that turntable video we can see our turntable image which will have no background and that is how you ",
+        "Summary": "### Comprehensive Guide to Creating a 360-Degree Turntable Animation for CLO Garments Creating a 360-degree turntable animation of a garment in CLO is a straightforward process. This guide will provide you with step-by-step instructions, definitions of key terms, and tips and tricks to ensure you achieve a polished final product. --- #### **Step 1: Prepare Your Garment in CLO** 1. **Open CLO 3D**: Launch the CLO 3D software. 2. **Select a Style**: Choose any garment style you have previously created or imported in CLO. 3. **Set Up the Scene**: Ensure the garment is properly positioned within the workspace for optimal viewing during the turntable animation. #### **Step 2: Set Up the Render Settings** 1. **Turn on Render**: Go to the Render settings panel and activate the render function. 2. **Select Turntable Animation**: - In the render settings, select the option for creating a turntable image. 3. **Adjust Video Settings**: - **Save Video Off**: Make sure this option is disabled if you want to save the output as images. - **Transparency Option**: Enable the transparency option to ensure that the background is clear. - **Image Format**: Set the image format to **PNG** to maintain transparency. #### **Step 3: Start the Interactive Render** 1. **Interactive Render**: Click on the \"Stop Interactive Render\" button if it is currently active. 2. **Hit Play**: Start the render process and allow CLO to create the series of images for your turntable animation. #### **Step 4: Use Media Encoder to Create Animation** 1. **Open Media Encoder**: - Once rendering is complete, open **Adobe Media Encoder** or the encoder of your choice. 2. **Add Images**: - Click the **plus (+)** button in Media Encoder to add the PNG images generated from your CLO render. 3. **Select Output Settings**: - Under the settings, choose **Animated GIF** as the output format. - Opt for **Animated GIF with Transparency** to maintain the clear background for your animation. #### **Step 5: Create and Save the Animation** 1. **Stitching Images Together**: Click the green play button to start the process of stitching all the images together into a single animated GIF. 2. **Open the Final Turntable Video**: Once the process is complete, navigate to the output folder to find your turntable animation. 3. **Preview**: Open the generated GIF to verify that the animation plays smoothly and maintains transparency. --- ### Key Definitions - **Turntable Animation**: A method of displaying a 3D object by rotating it 360 degrees around a central axis. - **Render**: The process of generating a 2D image or animation from a 3D model using software. - **Transparency**: The quality of being see-through; in graphics, it allows backgrounds to be displayed as clear. - **PNG**: A raster graphic file format that supports lossless data compression and transparency. - **Animated GIF**: A type of image file that supports both animated images and transparency, often used for short animations on the web. --- ### Tips and Tricks - **Lighting**: Ensure your lighting is optimal in CLO to avoid shadows that could detract from the garment's appearance. - **Resolution**: Consider the resolution of your images; higher resolutions will yield better quality but may take longer to render and process. - **Test Renders**: Before committing to a full animation, do a test render with a few frames to ensure everything looks correct. - **Export Settings**: Familiarize yourself with any additional export settings in Media Encoder that may enhance the quality of your GIF. - **File Size**: Keep an eye on the file size of your animated GIF, as larger sizes can be cumbersome for web use. By following the steps outlined in this guide, you should be able to successfully create and export a 360-degree turntable animation of any garment designed in CLO. Happy animating!"
+    },
+    {
+        "ArticleId": "fCkveuJh9JaysUfJ4uAtXP",
+        "VideoId": "IHo0N-ZAt2A",
+        "Source": "https://www.youtube.com/watch?v=IHo0N-ZAt2A",
+        "Title": "how to render super clean images in CLO 😍 tutorial by fashionx3d",
+        "publishedAt": "2023-10-12T13:00:23Z",
+        "Transcript": "    [Applause] n ",
+        "Summary": ""
+    },
+    {
+        "ArticleId": "nXkpZgREfEKUEo6Lg3XkrS",
+        "VideoId": "WV_5KH9IMzY",
+        "Source": "https://www.youtube.com/watch?v=WV_5KH9IMzY",
+        "Title": "DMZ-inspired collection by _c.gital_, created in CLO",
+        "publishedAt": "2023-10-11T13:00:31Z",
+        "Transcript": "[Applause] he ",
+        "Summary": ""
+    },
+    {
+        "ArticleId": "4ZsVj7CfUhnbym8GURFvsX",
+        "VideoId": "mx3-OB4EH0k",
+        "Source": "https://www.youtube.com/watch?v=mx3-OB4EH0k",
+        "Title": "marshmallow aesthetic 🍡 created in CLO by undercoverbananaandspacemonkey",
+        "publishedAt": "2023-10-10T13:00:43Z",
+        "Transcript": "",
+        "Summary": ""
+    },
+    {
+        "ArticleId": "4aGgVNFpAsr8W5RBHFG7BD",
+        "VideoId": "mQ6nVyCUCc0",
+        "Source": "https://www.youtube.com/watch?v=mQ6nVyCUCc0",
+        "Title": "this model & outfit are completely digital 😮 created with CLO and @UnrealEngine by @verce_io",
+        "publishedAt": "2023-10-09T13:00:41Z",
+        "Transcript": "",
+        "Summary": ""
+    },
+    {
+        "ArticleId": "A4PmmSPL9WJANvoxGZrHL6",
+        "VideoId": "SgDyqKm6fDY",
+        "Source": "https://www.youtube.com/watch?v=SgDyqKm6fDY",
+        "Title": "drenched in leather 🖤 designed in CLO by dara.greaney",
+        "publishedAt": "2023-10-06T13:00:21Z",
+        "Transcript": "",
+        "Summary": ""
+    },
+    {
+        "ArticleId": "nYGyPb8MwT5sKZmQETawgm",
+        "VideoId": "Ttf6zR28bKA",
+        "Source": "https://www.youtube.com/watch?v=Ttf6zR28bKA",
+        "Title": "would you wear this? metallic dress designed in CLO by eniushaart 💜",
+        "publishedAt": "2023-10-05T13:00:20Z",
+        "Transcript": "you talk dirty to me   ",
+        "Summary": ""
+    },
+    {
+        "ArticleId": "GjyKT9fkjv9V5RocJSy7Bp",
+        "VideoId": "0uuyJCZRYyo",
+        "Source": "https://www.youtube.com/watch?v=0uuyJCZRYyo",
+        "Title": "name this fit 💜 digital tailoring in CLO by Pezzo di Studio",
+        "publishedAt": "2023-10-04T13:00:00Z",
+        "Transcript": "  I ",
+        "Summary": ""
+    },
+    {
+        "ArticleId": "Gdpapk94YWFrrRP93CtFCx",
+        "VideoId": "Z6tzUUvFdN8",
+        "Source": "https://www.youtube.com/watch?v=Z6tzUUvFdN8",
+        "Title": "CLO Enterprise User Summit Highlights - Munich 2023",
+        "publishedAt": "2023-09-26T10:00:22Z",
+        "Transcript": "    going more into gaming and like customized outfits and games I see this is the future about social media now more live-action metaverse gaming   today I learned so many about different softwares this event has been amazing because this is really a nice platform for other designers from different brands start communicating and exchange ideas   thank you   ",
+        "Summary": ""
+    },
+    {
+        "ArticleId": "aWcXpzvxZfnxvzYmyH8wph",
+        "VideoId": "yTrXcC_O964",
+        "Source": "https://www.youtube.com/watch?v=yTrXcC_O964",
+        "Title": "Embark on your digital journey with CLO",
+        "publishedAt": "2023-09-21T02:16:50Z",
+        "Transcript": "  thank you     thank you     thank you             ",
+        "Summary": ""
+    },
+    {
+        "ArticleId": "2o87jEG92tzA4KEEcLvPV3",
+        "VideoId": "3DOmmS9DjMQ",
+        "Source": "https://www.youtube.com/watch?v=3DOmmS9DjMQ",
+        "Title": "Create Unreal Engine Outfit with CLO!",
+        "publishedAt": "2023-09-20T07:16:12Z",
+        "Transcript": "  nothing I'm afraid   ",
+        "Summary": ""
+    },
+    {
+        "ArticleId": "avW5oEyPKRWncpyNGT86sq",
+        "VideoId": "Q36mGhMCfwI",
+        "Source": "https://www.youtube.com/watch?v=Q36mGhMCfwI",
+        "Title": "set our hearts on fire ❤️‍🔥 designed in CLO by nafas_pahlevan_",
+        "publishedAt": "2023-09-15T13:00:31Z",
+        "Transcript": "there's a fire starting in my heart reaching a fever pictures bringing me ",
+        "Summary": ""
+    },
+    {
+        "ArticleId": "FJwwfAouUXAkv2xt9pVLf7",
+        "VideoId": "MGiw_h_RiOg",
+        "Source": "https://www.youtube.com/watch?v=MGiw_h_RiOg",
+        "Title": "jacket deconstructed 🧥 created for @timberland in CLO by @studiosucis",
+        "publishedAt": "2023-09-14T13:00:23Z",
+        "Transcript": "",
+        "Summary": ""
+    },
+    {
+        "ArticleId": "BQGgCxZcEjHD2DwqqMrcUA",
+        "VideoId": "hN_aS_uSy-A",
+        "Source": "https://www.youtube.com/watch?v=hN_aS_uSy-A",
+        "Title": "fit better with realistic soft body avatars in CLO",
+        "publishedAt": "2023-09-13T13:00:26Z",
+        "Transcript": "",
+        "Summary": ""
+    },
+    {
+        "ArticleId": "7aS3wSCWcsF8Dt4Cy3867K",
+        "VideoId": "tDcYmruoAhM",
+        "Source": "https://www.youtube.com/watch?v=tDcYmruoAhM",
+        "Title": "paint it blue 💙 created in CLO by clolover.ha",
+        "publishedAt": "2023-09-12T13:00:46Z",
+        "Transcript": "",
+        "Summary": ""
+    },
+    {
+        "ArticleId": "fXXM6xVsrzgR6ww8FKdCYK",
+        "VideoId": "8fsj75EPVlc",
+        "Source": "https://www.youtube.com/watch?v=8fsj75EPVlc",
+        "Title": "denim jacket in 14 seconds, digital sample created in CLO by stitchedbystitch_",
+        "publishedAt": "2023-09-11T13:00:11Z",
+        "Transcript": "",
+        "Summary": ""
+    },
+    {
+        "ArticleId": "24ZSo3LQyZY5hGZtV8Qoa6",
+        "VideoId": "YQ3ALTfK_0U",
+        "Source": "https://www.youtube.com/watch?v=YQ3ALTfK_0U",
+        "Title": "who could you see in this white suit? designed in CLO by styntsov_anton",
+        "publishedAt": "2023-09-11T13:00:32Z",
+        "Transcript": "",
+        "Summary": ""
+    },
+    {
+        "ArticleId": "7FitYVAMLVCirs5GbQ67c2",
+        "VideoId": "rxKhGP2OsZ4",
+        "Source": "https://www.youtube.com/watch?v=rxKhGP2OsZ4",
+        "Title": "this is your reminder to STREEEETCH 💙 created in CLO by soohynnr",
+        "publishedAt": "2023-09-08T13:00:43Z",
+        "Transcript": "    ",
+        "Summary": ""
+    },
+    {
+        "ArticleId": "mwuD7MbTebdsWdHWaAFTnL",
+        "VideoId": "Wo3H9EU6_sY",
+        "Source": "https://www.youtube.com/watch?v=Wo3H9EU6_sY",
+        "Title": "🌟 New camera animation in CLO 7.2",
+        "publishedAt": "2023-09-07T13:00:25Z",
+        "Transcript": "  thank you   ",
+        "Summary": ""
+    },
+    {
+        "ArticleId": "fKBrtaWKcS7qtFW4fCHvWv",
+        "VideoId": "tuKQ7iQruPI",
+        "Source": "https://www.youtube.com/watch?v=tuKQ7iQruPI",
+        "Title": "which gown is your favorite? 😍 designed in CLO by itsmarvelous__",
+        "publishedAt": "2023-09-06T13:00:43Z",
+        "Transcript": "this is the dimension of imagination it is an area which we call the Twilight [Applause]   Zone ",
+        "Summary": ""
+    },
+    {
+        "ArticleId": "NamLg8GvGRntTZJzQQHpgA",
+        "VideoId": "ZTDO6M13TXA",
+        "Source": "https://www.youtube.com/watch?v=ZTDO6M13TXA",
+        "Title": "classical dance meets digital fashion 💃 crafted in CLO by 赛博尖装MIRAIDA",
+        "publishedAt": "2023-09-05T13:00:32Z",
+        "Transcript": "    [Applause]   ",
+        "Summary": ""
+    },
+    {
+        "ArticleId": "k54PFWr5Kk7nHotpNKFbCV",
+        "VideoId": "DQWngW-BdGY",
+        "Source": "https://www.youtube.com/watch?v=DQWngW-BdGY",
+        "Title": "making of the Azalea pants 🌻 in CLO by kevin__tung",
+        "publishedAt": "2023-09-04T13:00:10Z",
+        "Transcript": "",
+        "Summary": ""
+    },
+    {
+        "ArticleId": "oMphJNXyttf5NFhFyZpJFE",
+        "VideoId": "6nWOu6zmp7U",
+        "Source": "https://www.youtube.com/watch?v=6nWOu6zmp7U",
+        "Title": "🌟 New elastic presets in CLO 7.2",
+        "publishedAt": "2023-09-01T13:00:07Z",
+        "Transcript": "",
+        "Summary": ""
+    },
+    {
+        "ArticleId": "QH7BcHKYJX85ckZz8keAdx",
+        "VideoId": "qznXeV8m3nU",
+        "Source": "https://www.youtube.com/watch?v=qznXeV8m3nU",
+        "Title": "which would you wear? 💃 slinky dresses created in CLO by @kcalmonte for @ohpolly_",
+        "publishedAt": "2023-08-31T13:00:48Z",
+        "Transcript": "",
+        "Summary": ""
+    },
+    {
+        "ArticleId": "Kfk63zmX24teLMtdAsorUA",
+        "VideoId": "X6-ELv815AM",
+        "Source": "https://www.youtube.com/watch?v=X6-ELv815AM",
+        "Title": "Creating a Zero-Waste Tunic in CLO",
+        "publishedAt": "2023-08-30T13:00:25Z",
+        "Transcript": "okay hello everyone today let's create a simple zero waste tunic involve creating a single pattern piece and using some editing tools to draw some lines and cut it in some strategic places first I'm going to change my default fabric to muslin then using the rectangle tool I'm going to create a rectangular pattern piece that is 24 inches wide and 48 inches high then I'm going to use my edit pattern tool and unfold the pattern with symmetric sewing along the center line next I'm going to offset an internal line 10 and a half inches from the top of my pattern then I'm going to offset another line and in a quarter inches from that previous line now on the first internal line that we created use your add Point split line tool to add a point three inches from the center line then right click on that point and choose divide internal point now with your edit pattern tool select the longer section of the line and delete it next on the second internal line at a point 12 and a half inches from the side then right click on the 12 and a half inch line and choose cut this is going to make a split in our pattern on the top of the pattern add a point 12 and a half inches from the side now where the first internal line crosses the center of the pattern draw a six inch internal line down then draw an internal line connecting that short horizontal line to the bottom of the six inch line you just drew with your edit pattern tool mark key over the points where the horizontal line and the angled line intersect and choose merge to point with your transform pattern tool right click on the pattern and choose remove linked editing now delete the two internal lines inside the triangle there are two of them because our pattern was symmetrical note the segment points the ones that are solid are already joined the outlined points are not use the merge to point technique to connect the unjoined segment points now select the entire triangle shape cut it and move it aside in the 2D window do not delete it remember this is zero waste now at an internal line from the top center of the pattern down to the top of the triangle and cut and sew that line I'm going to turn my 3D window around turn on the X-ray joints for the avatar select one of the shoulders click that little body icon this will turn on symmetrical adjustments and adjust the arms to give your avatar a t-pose I'm going to rotate back around to the front in my 3D window and now I'm going to rotate the pattern in the 3D window with my Gizmo and I'm going to place the opening around the neck simulate your pattern to see how it drapes you can use tools such as strengthen and pins to move the patterns into place to line up the back if you would like segment sew the center back together segment points you added on the top of the pattern will help with the sewing of the arms and the horizontal back now the triangle we cut out is there is a reminder we're not actually going to use it what I'm going to do is zoom in on the triangle that I cut out and use the add Point split line tool to add segment points to the diagonal legs of my triangle when I add those points and then going to drag them up very close to the two points that are there that split that Center back we have in essence recreated the triangle that we cut out so you can delete the triangle piece now if you would like simulate again to see how your tunic looks I've opened up my neck a bit and I added internal lines so that I could fold the collar down I also lengthened the bottom hem a little bit and just for fun I happen to have another piece of this fabric laying around so I added a pocket to the front finally I changed the fabric to Cotton gabardine and added a stripe print you could also add fold up hems and top stitching as you like ",
+        "Summary": "Certainly! Below is a comprehensive guide based on the provided transcript for creating a simple zero-waste tunic. This guide includes step-by-step instructions, definitions, tips, and tricks to help you through the process. --- ### Comprehensive Guide to Creating a Zero-Waste Tunic #### Overview This guide will help you create a simple zero-waste tunic using a single pattern piece. We will involve editing tools to design the tunic, with a focus on sustainability by minimizing fabric waste. --- ### Step-by-Step Instructions #### Step 1: Set Up Your Fabric 1. **Change Default Fabric**: Open your design software and set the default fabric to muslin, which is a lightweight cotton fabric used for making patterns. #### Step 2: Create the Pattern Piece 1. **Select the Rectangle Tool**: Use the rectangle tool in your software. 2. **Draw the Rectangle**: Create a rectangular pattern piece that is **24 inches wide and 48 inches high**. #### Step 3: Unfold the Pattern 1. **Edit Pattern Tool**: Access the edit pattern tool. 2. **Unfold the Pattern**: Select the symmetry option and unfold the pattern along the center line. #### Step 4: Add Internal Lines 1. **Offset First Internal Line**: Offset an internal line **10.5 inches** from the top of the pattern. 2. **Offset Second Internal Line**: Offset another line **1.25 inches** from the previous line. #### Step 5: Add Segment Points 1. **Add Point**: Use the add point split line tool to add a point **3 inches** from the center line on the first internal line. 2. **Divide Internal Point**: Right-click on that point and choose \"divide internal point.\" #### Step 6: Delete Unnecessary Sections 1. **Select Longer Section**: With the edit pattern tool, select the longer section of the line and delete it. #### Step 7: Make a Split in the Pattern 1. **Offset on Second Internal Line**: At a point **12.5 inches** from the side on the second internal line, right-click and choose \"cut.\" 2. **Add a Point on Top**: Add a point **12.5 inches** from the side at the top of the pattern. #### Step 8: Draw Internal Lines 1. **Draw Internal Line**: Where the first internal line crosses the center, draw a **6-inch internal line** down. 2. **Connect to Bottom Line**: Draw a line connecting the short horizontal line to the bottom of the 6-inch line. #### Step 9: Merge Points 1. **Mark Key Points**: Using the edit pattern tool, mark the intersection points where the horizontal and angled lines meet. 2. **Merge Points**: Choose \"merge to point\" to connect these points. #### Step 10: Remove Linked Editing 1. **Control Editing**: Right-click on the pattern and choose \"remove linked editing.\" #### Step 11: Clean Up the Pattern 1. **Delete Internal Lines**: Delete the two internal lines inside the triangle that were created previously. #### Step 12: Join Segment Points 1. **Check Segment Points**: Identify the solid segment points (joined) and outlined points (not joined). 2. **Merge Unjoined Points**: Use the \"merge to point\" technique to connect the unjoined segment points. #### Step 13: Cut and Move Triangle Shape 1. **Select the Triangle**: Select the entire triangle shape and cut it. 2. **Move Aside**: Move the cut triangle aside in the 2D window, keeping it for later use. **(Remember: This is a zero-waste project.)** #### Step 14: Create the Neckline 1. **Draw Internal Line**: From the top center of the pattern, draw an internal line down to the top of the triangle. 2. **Cut and Sew Line**: Cut along this line. #### Step 15: Adjust in 3D View 1. **X-Ray Joints**: Turn on X-ray joints for the avatar. 2. **T-Pose Adjustment**: Click the body icon to turn on symmetrical adjustments and position the arms in a T-pose. 3. **Rotate and Position**: Rotate the pattern in the 3D window to align the neckline with the avatar. #### Step 16: Simulate the Pattern 1. **Simulate**: Use the simulation tool to see how the tunic drapes. 2. **Use Strengthen and Pins**: Adjust the patterns using tools like strengthen and pins to align the back. #### Step 17: Segment Sew 1. **Segment Sew**: If desired, segment sew the center back together using the segment points added earlier. #### Step 18: Finalize Design 1. **Recreate Triangle**: Zoom in on the triangle and add segment points to the diagonal legs. 2. **Drag Points**: Drag the new points up to recreate the triangle shape that was cut out. 3. **Delete Triangle Piece**: Once recreated, delete the original triangle piece. #### Step 19: Additional Adjustments 1. **Neckline and Hem Adjustments**: Open the neckline further and add internal lines to fold the collar down. Lengthen the bottom hem if desired. 2. **Add a Pocket**: If you have extra fabric, add a pocket to the front of the tunic. #### Step 20: Final Touches 1. **Change Fabric**: Change the fabric type to cotton gabardine. 2. **Add Print**: Add a stripe print to the fabric. 3. **Hems and Top Stitching**: Optionally, add folded hems and top stitching to finish your design. --- ### Definitions - **Pattern Piece**: A template used to cut fabric pieces for sewing. - **Edit Pattern Tool**: A tool used to modify and edit pattern shapes and lines. - **Segment Points**: Points defined on a line that can be used to manipulate or sew patterns together. - **Simulate**: A function to visualize how the fabric drapes and behaves in a 3D space. ### Tips and Tricks - **Zero Waste**: Always keep cut pieces handy for future use to maintain a zero-waste approach. - **Use Guides**: Utilize grid lines or guides in your software for accurate measurements. - **Frequent Simulation**: Frequently simulate your design to catch issues early and make adjustments as needed. - **Experiment with Fabrics**: Feel free to experiment with different fabrics and prints that suit your style. --- By following this comprehensive guide, you can successfully create a stylish and sustainable zero-waste tunic! Enjoy the process of designing and sewing!"
+    },
+    {
+        "ArticleId": "9VYxNgfRbDL9NiiWSWwN4G",
+        "VideoId": "lKZrDWIA9FM",
+        "Source": "https://www.youtube.com/watch?v=lKZrDWIA9FM",
+        "Title": "Camera Animation In-Depth Tutorial [NEW in CLO 7.2]",
+        "publishedAt": "2023-08-29T13:00:41Z",
+        "Transcript": "  thank you   hi my name is Phoebe and today we're gonna go through the new animation camera motion feature it's going to be really great and we're really excited to show you all about this so let's Jump On In and have some fun while we learn so we have a few topics to cover in this video first we will cover camera motion files plus editing the camera motion creating camera motion the basic option and also creating camera motion the advanced option so let's start with camera motion editing files all right so here I have a project now first things first we need to always make sure that we have recorded our garment so what that means is you clicked this little record button here see here and you have recorded the Garment so once you have you'll see that there's this layer here that says garment and it's been recorded and everything now off to the side here it might be 300 you can change that number just make sure that it's larger than your end frame my end frame is 436. so that just means how long this motion file is and the end frame is 436 so it starts at zero and goes to 436 so I want to make sure that I can see all the way up to 500 so when I slide this there is still room so here I have my garment my transition and then also my motion that I chose so the transition is just basically making it so your standing pose transitions easily into the beginning of your motion pretty simple so then you can like slide this and it will walk around what we're going to do is there is an option now within Khloe when we add gave you all the camera motion we also gave you camera preset motions so if you select this you'll see that there's the no hand pose camera motion and the dress camera motion so these two work really well with those two motion files so the no hand pose and the dress so both of those files the camera motion was made with them that doesn't mean you can't use a different recording or motion with those camera presets it's just what we use to make them but you can use any recording with those camera motion files so any motion file you have within cloud or you've brought in or anything like that you can use within our presets for camera motion so when I bring this in I'm going to bring in the no hand pose because I actually picked that as my motion file that I recorded you'll see that now all of a sudden I have another layer down below and this is camera Okay so we've got camera and now when if I hit play what's going to happen is now my camera's zooming out and this is going to move remember that this is just a preview so if like those objs or whatever standing off to the side that's fine but you'll start to see would this the camera movement is already preset and it will just be there and you can play through it and see all of this great movement okay so that's the camera movement you can see it's all the way at the end here and all that now let's say I loaded in this preset and I want to edit it so let's first start this whole program off but I'm teaching you what just what is here okay so this camera layer has these really great things they're called keyframes okay when you select one your slider will move straight to it and what you'll also see is that your property editor has new information here this is all the ways in which you can move your camera and aiming um where the camera is positioned the camera group all that and then also the path so this is interesting because you have the option of having a straight line or uh are doing continuity so that those are two options when I show you the camera path which will be a little later you'll get it more but you'll have these two options and if it's straight there will be this little square here that's how you'll know the two differences and you can see here that I can slide through and all of that so you can always slide and move this but you can also select your keyframes and you can move them as well so you can click and drag if you need to and if you want to so if you ever get like you're pre-loaded and you're like oh well I decided that I actually like I'm going to move this around a bit I wanted to see what it would like look like if she at this started here and actually this was more out here so then you could try that out so that it took longer and everything and it will change all of that so you have these options on how you can like move your cameras around if you need to by just clicking and dragging the keyframes and what you can also do is you can select the keyframes and then adjust it over here in your property editor so if you wanted to change the position or the aim or something you could do that as well so you see how I'm changing this aim that could work as well so those are some of the ways in which you can just edit these presets that are already here for you pretty easy um and simple so if you are like hey I just want to work with what you've already provided and then edit based off of that totally fine definitely happen and we have some stuff just for you great now let's say you want to bring in a different camera motion file because you can also save these out so let's say I like edited this around where I was like hey I really like this new edit what you can do is you can go to file save as camera motion so this will then save that and you'll have it so I can also right click and delete this camera and I can then go to file open and bring in a camera version here I'm going into camera and I'm opening and now I have my own camera motion that I like so here you can actually see that I created another one that works with this motion as well I mean it could work with honestly any motion but it's this one just so you can notice like this is not the speed that you will get when you render this out or when you save it or like save it as an animation camera or render it as a camera animation or anything this is just showing you it and like a slower more you can always speed it up if you want to using your scene type scene Time Warp I rarely do I like to see it a little bit slow just like get the feeling of it all or I'll just like take my weight like slider and slide through it quickly but this does not always know that the speed you're seeing this in is not the actual speed so if we just quickly go back to that option of either straight or um continuity you can see here exactly what I mean so here let's go through and you see how this goes down and then up you see here down and then up so this is somewhere where I might want to change that so I'll select this and I'll check on Street chat track making it so now it will just go straight so again before when I had this unchecked it would go down and then up now when I select this and I check it on for straight it will just go straight out and that's like sometimes when you when you'll be like oh I want it straight I want it not straight you know you can always choose now you're probably wondering okay how do I make these scenes great question that is our next topic creating camera motion basic option all right so let me delete my camera and here I'm going to go all the way to the beginning 30. here's the tip wherever you want it to kind of start make sure that is where you click to start so there are three new buttons in camera animation there is the ad slash replace camera keyframe the camera viewfinder and the hide camera so this is on like it's automatically hidden so what we're going to just focus on for the basic option is just add and replace camera Keys frame so you just have to use your 3D your like window here your 3D animation window and what I'm going to do is I'm going to be like oh all right oh I want to see this here so I'm going to click here to start the camera and I think I want her to keep going   I'm gonna like click again because I kind of want the camera to stay like this so now I'm kind of like all right where's the next view point that I want to be at for her so sometimes I'll just like scroll through and you know kind of try to get a feel yeah you know add another keyframe even though the camera angle technically isn't shaping so sometimes if I want the next movement every time like every time you make a change yeah it makes it makes more sense when you see it so here I'm like okay now I think around here I'd want to have moved her yeah and then that's our new keyframe all right so this is what I was talking about it's like hard to explain but easy once you see it so the camera moves right so the camera is moving so that it gets the camera is moving so that it gets to the point that you're asking to get to so why you may ask am I adding in frames when you're like you're not asking the camera to move are you crazy you might be asking me no I'm sane and this is why I don't want the camera to move I want it to stay in this position and I want to just stay in this position when she hits there and I want it to stay in this position where she hits there but I want it to start to move after that so now I want it to start to move once she's after she hits there now let's say I didn't do that delete the camera frame I'm going to delete the account okay let's say I wasn't as smart as I am okay it's hard but I am so now what will happen is the camera will smooth it's like already moving might not notice it because it's doing it very solid but it's already moving to get into position for where it has to be see so before when it was just here and I was like great I want the camera to stay here when she hits this Mark I don't like to think of it like we're dancing okay I like to think about it as if I'm All Broadway if which is the life laundry I'm like she hits her Mark here the camera stays she hits her Mark here the camera stays then I'm like okay after this Mark the camera is moving so now I'm like where do I want the camera to move here so now you see like how the camera is moving from here to here but it's not going to move from here to here because I've made hits I've been like hit one hit two now moving so you kind of have to think about it like that like okay when she steps here where do I want the camera when she steps here where do I want the camera to be so just like remember that and remember any time that you're asking your camera to move like anytime you're asking your camera to switch position there's a transition moment right there's a transition but um okay um this is why I'm not on Broadway uh the transition is making it so like you have to account you have to account for the movements okay you gotta account for it otherwise you're like this isn't what I wanted and then you have to redo it so account for it think about it think where you want her to think where the camera should be where she steps or where they stop or he stepped or them they whomever is stepping think about it now I'm again thinking like okay do I want to transition do I like how this is going do I like the stagnant like camera movement right now if so make another keyframe right block it off then I'm like okay maybe now what I want to do is zoom in so that's really easy too all I have to do is use that middle Mouse button if you don't know about mental Mouse buttons guess what there's some basic beginner Workshop like and a basic beginner video thing all on YouTube that's for free and if you want to be fun see there's a udemy course that you can take and then you get a certificate but yeah so here I can zoom in with my middle Mouse button I hope you all actually know what that is and now I can say click now also remember what I said before like the distance between these will determine how fast that transition is remember before when I had like the transition from here all the way to here you were like that's pretty slow Phoebe you sure there's a change and I was like yeah I'm positive um this is gonna be a fast one so let me just hit play so you can see you see it now moving I'm having her hit her Mark and now the camera is going to move quickly to get to its mark okay now I might be like oh I want this to then slowly pan down because we're fancy so now I'm like okay now I'm gonna like pan beat remember like the length how fast you really want to go here so maybe I'm going to click again go like this like click again and it always helps if like they're semi similar distances so again you can click on this keyframe and like make this a little bit bigger this might also be when you say oh I want it to be a string right I want this to be straight because I just want it just straightly move down call back to what we just learned and then I can move here right like around here and I can move it down um this might be like a weird angle I'm not loving it but this is where we're at then I can say because I'm not loving that I want a real quick zoom out and maybe tilt up now I'm going to click again and now we've quickly zoomed out and out of that weird spot and then I can keep dragging through maybe I want to be like oh strike the pose camera fabulous you're killing it look at that and then she moves and then on camera it's a follower when she rotates wanted to be zoomed in like that this is what I'm deciding I do and then like that boom she's so fabulous and then again because I'm like I want to keep this Mark so I wanna I want her I want the camera to be here when she hits that Mark and now I'm like but it's then gonna zoom out and so cool and then it's gonna walk away she is going to walk away more like straight away and really nice shoes and then I can just go right through and then I can say great and what I always like to do is then I'll click here and sometimes I'll always change my current frame so I'll always change my start frame to be 30 because that's when the transition like ends and the like true motion begins and I actually always like to end my have my end frame actually earlier beat than as long as the emotion so I'll normally do like 4 20. and this is just like the um play amount so when it's recording or when I wrote uh like rendering it or anything like that it can be that play so start to end pretty great right okay so that was a very basic way in which you can apply the new camera animation so again it's just using the window you just rotate around adjust around within the window and in those keyframes and then move the keyframes around maybe you change to straight or you don't or anything and then you can adjust these very basic very easy I hope you all start this way because it's very simple to do and then your get excited about the next step so the next step is our motion Advanced option okay so this is the advanced way of doing things okay so here is the more advanced way of doing it first I'm going to show you how you can add in the cameras and all of the different tools and everything that you have and how you can start from scratch using this more advanced way and the other way I'm going to show you is kind of how I like it where you go along using the basic way in which you add in your spots and your marks and everything and then you can use the more advanced method to actually edit and adjust it it's up to you which way you want to do it it's your world I'm just living in it it's all up to you but these are just suggestions okay so first things first you have to add a camera keyframe I'm just going to delete this quickly I'm gonna go to set this up and then add in my account sorry next by just selecting this button next what I'm going to do is I'm going to go to my camera viewfinder because this is really helpful for the preview what you'll now see is here's my camera if I zoom out and away it's very far away it's all the way out here what I'm also going to do is make sure that this hidden is like hide show camera path is deactivated so that I can see the camera found what I can do is then I'm again going to use my slider and move but you'll use this camera view to see what the camera sees so this camera preview is showing you what the camera is seeing okay everybody gets this see how when I'm sliding and now I see the person that's what's happening so again I'm just gonna put this where's my little thing and now I can say okay great now let's say I want to move my camera I can just select the camera and I can use my gizmos but remember again if you've gone through all of the trainings and you know how glow works you already know this I haven't go through them it's really easy and they're free so it's great you can use your Gizmo know that your gizmos based off of like what how you're viewing it so sometimes it's really important to check multiple angles to make sure that it's moving where you want to I'm going to use this blue arrow to kind of zoom in a bit I can then use this red arrow to move off to the side and what I can do is I can actually replace this and add in this here then I might want to start to zoom out and click again so what you're doing here the big difference here is instead of using that 3D that screen as your Vantage Point and Views and everything you're using this camera preview and your camera here to see it what I'm turning on now is this camera path you see this Blue Line This is showing me where my camera has moved so if I slide back you'll see that the camera moves back it's like four let's see if the camera goes to where it should be now what I can do is I can also use my property Editor to move in more precise movements so I can move it so that now you see how my camera is moving more I can do that so maybe I want to move it more this is not where I want it for the Y so why don't forget Y is up and down so maybe I want to go more this way and know that this little blue dot this is the focus point so you can change this so I could select this blue dot and move this but know that it's also can be moved based off of camera aim so this that's really helpful because you can slide this around and then it can be moved based off of camera a then I can start again and maybe I want to move my camera aim a little bit more over here maybe it's not like I want to change my camera I just want to change the like angle that it's aiming at and then click again maybe I do actually want to change my whole camera and slide it over here and move it up sometimes I do just end up using the gizmos because it's a little bit easier but you also then will see like oh this is all the way back here yeah well it's closer and more right and then again I can like slide us through so remember when we were talking about Street and everything it's easier to tell here now this will go to straight honestly from a lot of straight so that you can see and straight so instead of that curve it's not going to be a straight so this is how you can add in so this is like more of the advanced way so you're constantly checking your preview and you're adding in your cameras and you have all of this lined up pretty easy I'm going to delete this I'm going to go to file open camera motion I'm gonna bring in my camera motion file here this is my favorite way of how I like to do it what I like to do is then I'll turn on this preview and I'll use this so if I'm like oh I don't love exactly what's going on here I want to see where my camera path is or maybe I want to adjust this a little bit then that's when I'll start to maybe move this around and I will select my keyframe and maybe I'll move my camera right so I'll use my property editor over here to maybe move my camera a bit I mean like actually this is what I wanted and then I can see all of that and then I can also say oh I want to make sure that while this is moving my aims also good so then I'll select the AIM and make sure that's all set so that's how I really like to use this is I like to set everything up using more of that basic method and then once it's set up I'll then use the preview and the camera pass to then perfect it and make sure that it's a little bit better and closer to exactly what I want one final thing that I want to show you all is it's a little bit again advanced but it's also to just show you that you don't actually have to have something walking or anything you could have something standing still like this and use the camera motions to add more uh more Dynamic look to it all so here I just have this girl dancing but because of the cameras zooming in and out it looks even more Dynamic and cool because I've added in the motion and again you can do this exactly how you normally do yeah it's pretty cool thank you so much for watching this video we hope you enjoyed it and you learned something new if you have any questions please write in the comment section if um you want to learn more like And subscribe we have tons of great videos to help you learn more about Khloe and all of the great tools and features we have within there thanks again for watching and I hope you enjoy ",
+        "Summary": "# Comprehensive Guide to the Animation Camera Motion Feature Welcome to your comprehensive guide on the new animation camera motion feature! This guide will walk you through everything you need to know, including step-by-step instructions, definitions, tips, and tricks. Let's dive in! --- ## Table of Contents 1. **Overview of Camera Motion** 2. **Preparing Your Project** 3. **Editing Camera Motion Files** 4. **Creating Camera Motion (Basic Option)** 5. **Creating Camera Motion (Advanced Option)** 6. **Tips and Tricks** 7. **Conclusion and Further Learning Resources** --- ### 1. Overview of Camera Motion The camera motion feature allows for dynamic storytelling in your projects by providing pre-set camera movements and the ability to create custom camera motions. This feature enhances the viewer's experience by delivering engaging visual perspectives. ### 2. Preparing Your Project Before you begin, ensure that your garment (or character) is recorded properly within your project. #### Step-by-Step Instructions: 1. **Record Your Garment:** - Click the **record button** to capture your garment's motion. - Confirm that a new layer labeled \"Garment\" appears in your project. 2. **Adjust the Timeline:** - Locate the timeline on the side (default is 300). - Make sure the number is larger than your end frame (e.g., if your end frame is 436, set the timeline to 500). ### 3. Editing Camera Motion Files Camera motion files can be edited to fit your specific needs. #### Step-by-Step Instructions: 1. **Select a Camera Motion Preset:** - Choose between options like **no hand pose camera motion** or **dress camera motion**. - Drag the selected camera motion to your workspace. 2. **Preview the Movement:** - Hit **play** to see the camera motion in action. - Adjust the position of the garment or camera as necessary. 3. **Editing Keyframes:** - Select a keyframe to view its properties in the property editor. - Move keyframes by clicking and dragging them in the timeline. - Adjust the properties (e.g., position, aim) using the property editor. 4. **Saving Edited Camera Motion:** - Go to **File** > **Save As Camera Motion** to save your customized camera motion. - Use **File** > **Open** to load different camera motion files. ### 4. Creating Camera Motion (Basic Option) Creating your camera movement from scratch can be straightforward. #### Step-by-Step Instructions: 1. **Initiate Keyframes:** - Click to add a camera keyframe at your desired starting point. - Continue clicking the timeline to add keyframes where you want the camera to stay or move. 2. **Establishing Movement:** - Think of your camera as a dancer. Use keyframes to mark positions where the camera should stay and where it should move. - Adjust the distance between keyframes to control the speed of the camera transition. 3. **Zooming and Panning:** - Use the **middle mouse button** to zoom in/out. - Click to set new keyframes for panning movements. ### 5. Creating Camera Motion (Advanced Option) For more control and precision, utilize the advanced camera motion creation process. #### Step-by-Step Instructions: 1. **Setup the Camera Viewfinder:** - Click the camera viewfinder to see what the camera sees. - Ensure the **hide/show camera path** option is deactivated for better visibility. 2. **Use Gizmos for Precise Movement:** - Utilize the gizmos (colored arrows) to adjust camera position and angle. - Adjust your camera aim using the blue dot in the viewer. 3. **Refining Your Camera Path:** - Use the property editor to make precise adjustments to your camera's movement and aim. - Preview your adjustments in real-time to ensure they match your vision. 4. **Combining Basic and Advanced Techniques:** - Start with the basic method to establish keyframes and initial movements. - Switch to the advanced method to refine and perfect your camera motion. ### 6. Tips and Tricks - **Think Like a Director:** Always visualize the story's flow and how camera angles enhance the narrative. - **Use Preview Mode:** Regularly check the camera preview to ensure the motion aligns with your vision. - **Adjust Keyframe Timing:** The distance between keyframes affects the speed of transitions; adjust accordingly for smoother movements. - **Experiment and Save:** Always save different versions of your camera motions to avoid losing a good setup. ### 7. Conclusion and Further Learning Resources Thank you for exploring the animation camera motion feature! If you have any questions, feel free to leave them in the comments section. Don’t forget to like and subscribe for more tutorials and tips on using Khloe effectively. For further learning: - **YouTube Tutorials:** Search for basic beginner workshops to familiarize yourself with the interface. - **Online Courses:** Consider enrolling in a course on platforms like Udemy to get a certificate and deepen your knowledge. Happy animating!"
+    },
+    {
+        "ArticleId": "eCHDRVVFDFD6zmn3ryquvu",
+        "VideoId": "9McSRpy1MgA",
+        "Source": "https://www.youtube.com/watch?v=9McSRpy1MgA",
+        "Title": "Tron and Samus inspired leggings by designingwithellie in CLO",
+        "publishedAt": "2023-08-28T13:00:12Z",
+        "Transcript": "forever   [Applause]   [Applause] ",
+        "Summary": ""
+    },
+    {
+        "ArticleId": "h3h8vLnJ9eZGGJDEHHRucm",
+        "VideoId": "XzcOPAvgOf8",
+        "Source": "https://www.youtube.com/watch?v=XzcOPAvgOf8",
+        "Title": "music meets fashion 🎶 which is your favorite combo?",
+        "publishedAt": "2023-08-25T13:00:23Z",
+        "Transcript": "let me be your woman   sometimes   ",
+        "Summary": ""
+    },
+    {
+        "ArticleId": "kKT6puwpCyTWTucGrkWsg3",
+        "VideoId": "XHftc0V15do",
+        "Source": "https://www.youtube.com/watch?v=XHftc0V15do",
+        "Title": "🌟 New modular mode on CLO 7.2",
+        "publishedAt": "2023-08-24T13:00:34Z",
+        "Transcript": "",
+        "Summary": ""
+    },
+    {
+        "ArticleId": "KUxjp5KNSrbsFpGamGqz7L",
+        "VideoId": "bZVd39qbfYU",
+        "Source": "https://www.youtube.com/watch?v=bZVd39qbfYU",
+        "Title": "playing dress-up with CONNECT assets 💙 styled in CLO by dita.var",
+        "publishedAt": "2023-08-23T13:00:35Z",
+        "Transcript": "",
+        "Summary": ""
+    }
+]
