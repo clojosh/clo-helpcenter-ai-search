@@ -300,51 +300,6 @@ class AISearch:
             with open(os.path.join(backend_dir, "indexes", self.azure_env.stage, f"{brand}-index-english.json"), "w+", encoding="utf-8") as f:
                 json.dump(results, f, ensure_ascii=False, indent=4)
 
-    def delete_posts(self, index_path: str, age: int = 3):
-        """
-        Delete posts from the AI Search index older than the age(years).
-
-        Args:
-            index_path (str): Path to the json file containing the index.
-            age (int, optional): The age in years of posts to delete. Defaults to 3.
-        """
-
-        with open(index_path, "r", encoding="utf-8") as f:
-            documents = json.load(f)
-
-            # Loop through the documents and check the created_at date
-            for i, document in enumerate(documents):
-                # Get the post from the Zendesk API
-                response = requests.request(
-                    "GET",
-                    f"https://support.clo3d.com/api/v2/community/posts/{document['ArticleId']}",
-                    headers={
-                        "Content-Type": "application/json",
-                    },
-                )
-
-                posts_json = json.loads(response.text)
-                # print(posts_json)
-
-                # Convert the created_at date to a datetime object
-                created_at = datetime.strptime(posts_json["post"]["created_at"], "%Y-%m-%dT%H:%M:%SZ")
-
-                # Set the cutoff date to 3 years ago
-                cutoff_date = datetime.strptime(
-                    "{}-01-01T00:00:00Z".format(datetime.today().year - age),
-                    "%Y-%m-%dT%H:%M:%SZ",
-                )
-
-                # If the created_at date is less than the cutoff date, delete the post
-                if created_at < cutoff_date:
-                    print(f"Deleting {document['ArticleId']}")
-                    self.search_client.upload_documents(
-                        {
-                            "@search.action": "delete",
-                            "ArticleId": str(document["ArticleId"]),
-                        }
-                    )
-
     def document_source_breakdown(self):
         with open(os.path.join(backend_dir, "indexes", self.azure_env.stage, "clo3d-index-english.json"), "r", encoding="utf-8") as f:
             documents = json.load(f)
@@ -384,6 +339,7 @@ if __name__ == "__main__":
             "Delete Documents",
             "Delete Posts By Age",
             "Get Document Source Breakdown",
+            "Find Missing Documents Per Source",
         ],
     ).ask()
 
