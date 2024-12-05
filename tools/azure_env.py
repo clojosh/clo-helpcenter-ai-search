@@ -10,12 +10,17 @@ from openai import AzureOpenAI
 from tools.openai_helper import OpenAIHelper
 
 backend_dir = Path(__file__).parent.parent
+zendesk_article_api_endpoint = "https://{0}.zendesk.com/api/v2/help_center/{1}/articles.json?page={2}&per_page=30&sort_by=updated_at&sort_order=desc"
+zendesk_article_section_api_endpoint = "https://{0}.zendesk.com/api/v2/help_center/{1}/sections/{2}.json"
+zendesk_article_category_api_endpoint = "https://{0}.zendesk.com/api/v2/help_center/{1}/categories/{2}.json"
+zendesk_article_attachment_api_endpoint = "https://support.{0}.com/api/v2/help_center/{1}/articles/{2}/attachments"
 
 
 class AzureEnv:
-    def __init__(self, stage="dev", brand=""):
+    def __init__(self, stage="dev", brand="", language="English"):
         self.stage = stage
         self.brand = brand
+        self.language = language
 
         if stage == "prod":
             load_dotenv(os.path.join(backend_dir, ".env.prod"))
@@ -23,7 +28,8 @@ class AzureEnv:
             load_dotenv(os.path.join(backend_dir, ".env.dev"))
 
         self.AZURE_SEARCH_SERVICE = os.environ.get("AZURE_SEARCH_SERVICE")
-        self.INDEX_NAME = os.environ.get(f"{brand.upper()}_AZURE_SEARCH_INDEX", "clo3d-index-english")
+
+        self.INDEX_NAME = os.environ.get(f"{brand.upper()}_AZURE_SEARCH_INDEX_{language.upper()}", "clo3d-index-english")
 
         self.SEARCH_CLIENT_ENDPOINT = f"https://{self.AZURE_SEARCH_SERVICE}.search.windows.net"
         self.AZURE_KEY_CREDENTIAL = AzureKeyCredential(os.environ.get("AZURE_SEARCH_KEY"))
@@ -59,3 +65,54 @@ class AzureEnv:
             self.AZURE_OPENAI_CHATGPT_DEPLOYMENT,
             self.AZURE_OPENAI_EMB_DEPLOYMENT,
         )
+
+    def get_locale(self):
+        locale = {"English": "en-us", "Espanol": "es", "Japanese": "ja", "Korean": "ko", "Portuguese": "pt-br", "Chinese": "zh-cn", "Taiwanese": "tw"}
+        return locale[self.language]
+
+    def get_article_path(self) -> str:
+        document_path = {
+            "English": os.path.join(self.brand, "articles", "en-us"),
+            "Espanol": os.path.join(self.brand, "articles", "es"),
+            "Japanese": os.path.join(self.brand, "articles", "ja"),
+            "Korean": os.path.join(self.brand, "articles", "ko"),
+            "Portuguese": os.path.join(self.brand, "articles", "pt-br"),
+            "Chinese": os.path.join(self.brand, "articles", "zh-cn"),
+            "Taiwanese": os.path.join(self.brand, "articles", "tw"),
+        }
+
+        os.makedirs(document_path[self.language], exist_ok=True)
+
+        return document_path[self.language]
+
+    def get_zendesk_article_api_endpoint(self, page: int):
+        if self.brand == "closet":
+            return zendesk_article_api_endpoint.format("clo-set", self.get_locale(), page)
+        elif self.brand == "md":
+            return zendesk_article_api_endpoint.format("marvelousdesigner", self.get_locale(), page)
+
+        return zendesk_article_api_endpoint.format(self.brand, self.get_locale(), page)
+
+    def get_zendesk_article_attachment_api_endpoint(self, article_id):
+        if self.brand == "closet":
+            return zendesk_article_attachment_api_endpoint.format("clo-set", self.get_locale(), article_id)
+        elif self.brand == "md":
+            return zendesk_article_attachment_api_endpoint.format("marvelousdesigner", self.get_locale(), article_id)
+
+        return zendesk_article_attachment_api_endpoint.format(self.brand, self.get_locale(), article_id)
+
+    def get_zendesk_article_section_api_endpoint(self, section_id):
+        if self.brand == "closet":
+            return zendesk_article_section_api_endpoint.format("clo-set", self.get_locale(), section_id)
+        elif self.brand == "md":
+            return zendesk_article_section_api_endpoint.format("marvelousdesigner", self.get_locale(), section_id)
+
+        return zendesk_article_section_api_endpoint.format(self.brand, self.get_locale(), section_id)
+
+    def get_zendesk_article_category_api_endpoint(self, category_id):
+        if self.brand == "closet":
+            return zendesk_article_category_api_endpoint.format("clo-set", self.get_locale(), category_id)
+        elif self.brand == "md":
+            return zendesk_article_category_api_endpoint.format("marvelousdesigner", self.get_locale(), category_id)
+
+        return zendesk_article_category_api_endpoint.format(self.brand, self.get_locale(), category_id)

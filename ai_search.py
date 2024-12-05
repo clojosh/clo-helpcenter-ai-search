@@ -154,7 +154,7 @@ class AISearch:
                 retrievable=True,
             ),
             SearchableField(name="Source", type=SearchFieldDataType.String, retrievable=True),
-            # SearchableField(name="Labels", type=SearchFieldDataType.String, retrievable=True, searchable=True),
+            SearchableField(name="Labels", type=SearchFieldDataType.String, retrievable=True, searchable=True),
             SearchableField(
                 name="YoutubeLinks",
                 collection=True,

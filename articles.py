@@ -23,8 +23,6 @@ class Article:
     def __init__(self, azure_env: AzureEnv):
         self.azure_env = azure_env
         self.search_client = azure_env.search_client
-        self.article_path = azure_env.get_locale_path("articles")
-        self.zendesk_article_api_endpoint = azure_env.get_zendesk_articles_api_endpoint(1)
 
     def get_zendesk_document(self, article_id):
         page_url = requests.request(
@@ -35,8 +33,9 @@ class Article:
             },
         )
 
-        print(page_url.text)
+        return json.loads(page_url.text)
 
+    @staticmethod
     def get_zendesk_documents(stage, brand, language, article_path, page):
         print("Getting Zendesk Articles for page: " + str(page))
 
@@ -44,7 +43,7 @@ class Article:
 
         page_url = requests.request(
             "GET",
-            azure_env.get_zendesk_articles_api_endpoint(page),
+            azure_env.get_zendesk_article_api_endpoint(page),
             headers={
                 "Content-Type": "application/json",
             },
@@ -71,13 +70,21 @@ class Article:
                     continue
 
                 if brand == "clo3d":
-                    article["html_url"] = re.findall(r"https:\/\/support\.clo3d\.com\/hc\/en-us\/articles\/\d+", article["html_url"])[0]
+                    article["html_url"] = re.findall(
+                        rf"https:\/\/support\.clo3d\.com\/hc\/{azure_env.get_locale()}\/articles\/\d+", article["html_url"]
+                    )[0]
                 elif brand == "closet":
-                    article["html_url"] = re.findall(r"https:\/\/support\.clo-set\.com\/hc\/en-us\/articles\/\d+", article["html_url"])[0]
+                    article["html_url"] = re.findall(
+                        rf"https:\/\/support\.clo-set\.com\/hc\/{azure_env.get_locale()}\/articles\/\d+", article["html_url"]
+                    )[0]
                 elif brand == "clovf":
-                    article["html_url"] = re.findall(r"https:\/\/clovf\.zendesk\.com\/hc\/en-us\/articles\/\d+", article["html_url"])[0]
+                    article["html_url"] = re.findall(
+                        rf"https:\/\/clovf\.zendesk\.com\/hc\/{azure_env.get_locale()}\/articles\/\d+", article["html_url"]
+                    )[0]
                 elif brand == "md":
-                    article["html_url"] = re.findall(r"https:\/\/support\.marvelousdesigner\.com\/hc\/en-us\/articles\/\d+", article["html_url"])[0]
+                    article["html_url"] = re.findall(
+                        rf"https:\/\/support\.marvelousdesigner\.com\/hc\/{azure_env.get_locale()}\/articles\/\d+", article["html_url"]
+                    )[0]
 
                 article["youtube_links"] = extract_youtube_links(str(article["body"]))
                 article["body"] = remove_html_tags(str(article["body"]))
@@ -112,19 +119,23 @@ class Article:
             "Content-Type": "application/json",
         }
 
-        response = requests.request("GET", self.zendesk_article_api_endpoint, headers=headers)
+        response = requests.request("GET", self.azure_env.get_zendesk_article_api_endpoint(1), headers=headers)
         json_objects = json.loads(response.text)
         page_count = json_objects["page_count"]
 
         with multiprocessing.Pool(5) as p:
             p.starmap_async(
                 Article.get_zendesk_documents,
-                [(self.azure_env.stage, self.azure_env.brand, self.azure_env.language, self.article_path, page) for page in range(1, 1 + page_count)],
+                [
+                    (self.azure_env.stage, self.azure_env.brand, self.azure_env.language, self.azure_env.get_article_path(), page)
+                    for page in range(1, page_count + 1)
+                ],
                 error_callback=lambda e: print(e),
             )
             p.close()
             p.join()
 
+    @staticmethod
     def upload_documents(env, brand, language, article_path, file):
         print(f"Uploading {file}")
 
@@ -154,11 +165,13 @@ class Article:
                 azure_env.search_client.upload_documents(documents)
 
     def mp_upload_documents(self):
-        file_paths = sorted(os.listdir(self.article_path), key=lambda x: int(x.partition("_")[2].partition(".")[0]))
+        file_paths = sorted(os.listdir(self.azure_env.get_article_path()), key=lambda x: int(x.partition("_")[2].partition(".")[0]))
 
         upload_documents_params = []
         for file in file_paths:
-            upload_documents_params.append((self.azure_env.stage, self.azure_env.brand, self.azure_env.language, self.article_path, file))
+            upload_documents_params.append(
+                (self.azure_env.stage, self.azure_env.brand, self.azure_env.language, self.azure_env.get_article_path(), file)
+            )
 
         with multiprocessing.Pool(5) as p:
             p.starmap_async(Article.upload_documents, upload_documents_params, error_callback=lambda e: print(e))
@@ -204,8 +217,9 @@ class Article:
 if __name__ == "__main__":
     stage = questionary.select("Which stage?", choices=["prod", "dev"]).ask()
     brand = questionary.select("Which brand?", choices=["clo3d", "closet", "clovf", "md"]).ask()
+    language = questionary.select("Which language?", choices=["English", "Korean"]).ask()
     task = questionary.select("What task?", choices=["Get Zendesk Article", "Get All Zendesk Articles", "Delete Articles", "Upload Articles"]).ask()
-    article = Article(AzureEnv(stage, brand))
+    article = Article(AzureEnv(stage, brand, language))
 
     if task == "Get Zendesk Article":
         article_id = questionary.text("Article ID").ask()
